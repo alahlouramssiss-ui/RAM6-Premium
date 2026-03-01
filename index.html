@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAM6 Premium Cleaning — Turnover Airbnb | Casablanca & Dar Bouazza</title>
+  <meta name="description" content="RAM6 Premium Cleaning : ménage turnover premium pour locations courte durée (Airbnb/Booking) à Casablanca & Dar Bouazza. Checklist, photos fin de prestation, option linge & consommables." />
+
+  <style>
+    :root{
+      /* Premium + calme (propreté / confiance) */
+      --bg: #F7FAFC;
+      --surface: #FFFFFF;
+      --ink: #0B1320;
+      --muted: #5B677A;
+      --line: rgba(10, 25, 47, .10);
+
+      --navy: #0A1930;
+      --teal: #1AA6A6;
+      --teal2:#0E7C7B;
+      --soft: #EEF4F6;
+      --shadow: 0 10px 30px rgba(10,25,47,.08);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1100px 700px at 10% 0%, rgba(26,166,166,.08), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(10,25,48,.06), transparent 60%),
+                  var(--bg);
+      color: var(--ink);
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      font-weight:900; letter-spacing:.2px;
+    }
+    .logoMark{
+      width:36px;height:36px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(26,166,166,.95), rgba(10,25,48,.95));
+      box-shadow: 0 12px 22px rgba(10,25,47,.12);
+      display:grid;place-items:center;color:#fff;font-weight:900;
+      font-size:14px;
+      flex:0 0 auto;
+    }
+    .badge{
+      font-size:12px;padding:5px 10px;border:1px solid var(--line);
+      border-radius:999px;color:var(--muted); background: rgba(255,255,255,.7);
+      white-space:nowrap;
+    }
+    .links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+    .links a{opacity:.9;text-decoration:none;font-size:14px;color:var(--muted)}
+    .links a:hover{opacity:1;color:var(--ink);text-decoration:underline}
+
+    /* Language toggle */
+    .lang{
+      display:flex;gap:6px;align-items:center;
+      padding:6px;border:1px solid var(--line);border-radius:999px;
+      background: rgba(255,255,255,.75);
+      box-shadow: 0 8px 18px rgba(10,25,47,.06);
+    }
+    .lang button{
+      border:0;background:transparent;cursor:pointer;
+      padding:8px 10px;border-radius:999px;font-weight:800;font-size:13px;
+      color:var(--muted);
+    }
+    .lang button.active{
+      background: linear-gradient(135deg, rgba(26,166,166,.14), rgba(10,25,48,.04));
+      color:var(--navy);
+      border:1px solid rgba(26,166,166,.30);
+    }
+
+    .hero{
+      padding:26px 0 8px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px; align-items:stretch;
+    }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .heroCard{
+      padding:22px;
+      border-radius: calc(var(--radius) + 2px);
+      background:
+        linear-gradient(180deg, rgba(26,166,166,.08), rgba(10,25,48,.03)),
+        var(--surface);
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      color: var(--navy);
+    }
+    @media (max-width:520px){ h1{font-size:32px} }
+
+    .sub{
+      margin:0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .pillRow{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:13px;
+      color: var(--muted);
+      background: rgba(255,255,255,.75);
+    }
+
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--navy);
+      padding: 11px 14px;
+      border-radius: 14px;
+      text-decoration:none;
+      font-weight: 900;
+      font-size: 14px;
+      display:inline-flex; align-items:center; gap:10px;
+      box-shadow: 0 8px 18px rgba(10,25,47,.06);
+      transition: transform .12s ease, box-shadow .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 12px 22px rgba(10,25,47,.10)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(26,166,166,.14), rgba(10,25,48,.05));
+      border-color: rgba(26,166,166,.35);
+    }
+    .btn.wa{
+      background: linear-gradient(135deg, rgba(26,166,166,.20), rgba(14,124,123,.06));
+      border-color: rgba(14,124,123,.35);
+    }
+    .iconDot{
+      width:10px;height:10px;border-radius:99px;background: var(--teal);
+      box-shadow: 0 0 0 4px rgba(26,166,166,.12);
+    }
+
+    .side .kpi{display:grid;grid-template-columns:1fr 1fr; gap:10px}
+    .kpi .box{
+      background: linear-gradient(180deg, rgba(238,244,246,.85), rgba(255,255,255,.90));
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .kpi .n{font-size:18px;font-weight:950;color:var(--navy)}
+    .kpi .t{font-size:12px;color:var(--muted);margin-top:2px}
+
+    .section{padding:18px 0}
+    h2{margin:0 0 10px;font-size:22px;color:var(--navy)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+    .card h3{margin:0 0 8px;font-size:16px;color:var(--navy)}
+    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .list{margin:10px 0 0;padding-left:16px;color:var(--muted);font-size:14px;line-height:1.6}
+
+    .pricing{display:grid;grid-template-columns:1.2fr .8fr; gap:12px}
+    @media (max-width:900px){ .pricing{grid-template-columns:1fr} }
+
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th,td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left}
+    th{color:var(--muted);font-weight:900}
+
+    .note{color:var(--muted);font-size:13px;line-height:1.55;margin-top:8px}
+
+    .form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    @media (max-width:700px){ .form{grid-template-columns:1fr} }
+    input,select,textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(238,244,246,.75);
+      color: var(--ink);
+      font-size: 14px;
+      outline: none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .footer{
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      margin-top: 12px;
+    }
+    .small{font-size:12px;color:var(--muted)}
+
+    /* Language blocks */
+    [data-lang]{display:none}
+    [data-lang].on{display:block}
+
+    /* Small helper badge inside sections */
+    .miniBadge{
+      display:inline-block;
+      font-size:12px;
+      padding:5px 10px;
+      border-radius:999px;
+      background: rgba(26,166,166,.10);
+      border:1px solid rgba(26,166,166,.25);
+      color: var(--navy);
+      font-weight:900;
+      margin-bottom:10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- NAV -->
+    <div class="nav">
+      <div class="brand">
+        <div class="logoMark">R6</div>
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span>RAM6 Premium Cleaning</span>
+            <span class="badge">Casablanca • Dar Bouazza</span>
+          </div>
+          <div class="small" data-lang="fr">Turnover premium • Airbnb / Booking • Standard hôtel</div>
+          <div class="small" data-lang="en">Premium turnovers • Airbnb / Booking • Hotel-level standards</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="lang" aria-label="Language switch">
+          <button type="button" id="btnFR" class="active">FR</button>
+          <button type="button" id="btnEN">EN</button>
+        </div>
+        <a href="#services" data-lang="fr">Services</a>
+        <a href="#services" data-lang="en">Services</a>
+        <a href="#tarifs" data-lang="fr">Tarifs</a>
+        <a href="#tarifs" data-lang="en">Pricing</a>
+        <a href="#process" data-lang="fr">Process</a>
+        <a href="#process" data-lang="en">Process</a>
+        <a href="#contact" data-lang="fr">Devis</a>
+        <a href="#contact" data-lang="en">Quote</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card heroCard">
+        <div data-lang="fr" class="on">
+          <h1>Turnover haut de gamme<br/>pour locations courte durée</h1>
+          <p class="sub">
+            Nous aidons les hôtes et conciergeries à offrir une expérience irréprochable — à chaque séjour.
+            Notre mission : un logement impeccable, prêt à accueillir, entre check-out et check-in.
+          </p>
+          <div class="pillRow">
+            <span class="pill">✅ Standard hôtel</span>
+            <span class="pill">📸 Photos fin de prestation</span>
+            <span class="pill">🧺 Option linge</span>
+            <span class="pill">⏱️ Rapide & fiable</span>
+            <span class="pill">🧾 Facturation pro</span>
+          </div>
+        </div>
+
+        <div data-lang="en">
+          <h1>Premium turnovers<br/>for short-term rentals</h1>
+          <p class="sub">
+            We help hosts and property managers deliver a flawless guest experience — every stay.
+            Our mission: a perfectly prepared home, ready between check-out and check-in.
+          </p>
+          <div class="pillRow">
+            <span class="pill">✅ Hotel-level standards</span>
+            <span class="pill">📸 End-of-service photos</span>
+            <span class="pill">🧺 Linen add-on</span>
+            <span class="pill">⏱️ Fast & reliable</span>
+            <span class="pill">🧾 Professional billing</span>
+          </div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn wa" id="waBtn" href="#"><span class="iconDot"></span>
+            <span data-lang="fr" class="on">WhatsApp – Demander un devis</span>
+            <span data-lang="en">WhatsApp – Get a quick quote</span>
+          </a>
+          <a class="btn primary" href="#contact">
+            <span data-lang="fr" class="on">Formulaire de devis</span>
+            <span data-lang="en">Quote form</span>
+          </a>
+          <a class="btn" href="#tarifs">
+            <span data-lang="fr" class="on">Voir les tarifs</span>
+            <span data-lang="en">View pricing</span>
+          </a>
+        </div>
+
+        <p class="note small" data-lang="fr" class="on">
+          Pour un devis précis : superficie, nombre de chambres/SDB, état du logement, et si tu veux l’option linge.
+        </p>
+        <p class="note small" data-lang="en">
+          For an accurate quote: property size, bedrooms/bathrooms, current condition, and whether you want linen service.
+        </p>
+      </div>
+
+      <div class="card side">
+        <div class="kpi">
+          <div class="box">
+            <div class="n">11h → 15h</div>
+            <div class="t" data-lang="fr" class="on">fenêtre type turnover</div>
+            <div class="t" data-lang="en">typical turnover window</div>
+          </div>
+          <div class="box">
+            <div class="n">6–10</div>
+            <div class="t" data-lang="fr" class="on">photos fin de prestation</div>
+            <div class="t" data-lang="en">end-of-service photos</div>
+          </div>
+          <div class="box">
+            <div class="n">1h–4h</div>
+            <div class="t" data-lang="fr" class="on">durée selon logement</div>
+            <div class="t" data-lang="en">duration by property</div>
+          </div>
+          <div class="box">
+            <div class="n" data-lang="fr" class="on">Dégressif</div>
+            <div class="n" data-lang="en">Discounts</div>
+            <div class="t" data-lang="fr" class="on">conciergeries</div>
+            <div class="t" data-lang="en">for managers</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <p class="note" style="margin:0" data-lang="fr" class="on">
+            <b>Zones</b> : Casablanca • Dar Bouazza • Ain Diab • Maarif • Anfa (et alentours).
+            <br/>Interventions planifiées + urgences selon disponibilité.
+          </p>
+          <p class="note" style="margin:0" data-lang="en">
+            <b>Areas</b>: Casablanca • Dar Bouazza • Ain Diab • Maarif • Anfa (and nearby).
+            <br/>Scheduled cleanings + last-minute requests depending on availability.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="section" id="services">
+      <h2 data-lang="fr" class="on">Services</h2>
+      <h2 data-lang="en">Services</h2>
+
+      <div class="grid">
+        <div class="card">
+          <span class="miniBadge" data-lang="fr" class="on">Turnover</span>
+          <span class="miniBadge" data-lang="en">Turnover</span>
+
+          <h3 data-lang="fr" class="on">Express Turnover</h3>
+          <h3 data-lang="en">Express Turnover</h3>
+
+          <p data-lang="fr" class="on">
+            L’essentiel “prêt à accueillir” entre deux réservations : nettoyage complet, remise en ordre,
+            et photos fin de prestation.
+          </p>
+          <p data-lang="en">
+            The essentials between bookings: full cleaning, quick reset, and end-of-service photos — guest-ready.
+          </p>
+
+          <ul class="list" data-lang="fr" class="on">
+            <li>Sols, surfaces, cuisine, salle de bain</li>
+            <li>Poubelles, poussière, finitions visibles</li>
+            <li>Check visuel des points critiques</li>
+          </ul>
+          <ul class="list" data-lang="en">
+            <li>Floors, surfaces, kitchen, bathroom</li>
+            <li>Trash, dusting, visible finishing touches</li>
+            <li>Critical-point visual check</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="miniBadge" data-lang="fr" class="on">Standard hôtel</span>
+          <span class="miniBadge" data-lang="en">Hotel standard</span>
+
+          <h3 data-lang="fr" class="on">Premium Turnover</h3>
+          <h3 data-lang="en">Premium Turnover</h3>
+
+          <p data-lang="fr" class="on">
+            Pour maximiser les avis 5⭐ : finitions minutieuses, contrôle des détails et inspection visuelle renforcée.
+          </p>
+          <p data-lang="en">
+            Built for 5-star reviews: detail-focused finishing and an enhanced visual inspection.
+          </p>
+
+          <ul class="list" data-lang="fr" class="on">
+            <li>Miroirs / vitres intérieures</li>
+            <li>Détartrage léger (robinets/parois)</li>
+            <li>Contrôle odeurs + checklist renforcée</li>
+          </ul>
+          <ul class="list" data-lang="en">
+            <li>Mirrors / interior glass</li>
+            <li>Light descaling (faucets/shower areas)</li>
+            <li>Odor check + reinforced checklist</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="miniBadge" data-lang="fr" class="on">Remise à niveau</span>
+          <span class="miniBadge" data-lang="en">Property refresh</span>
+
+          <h3 data-lang="fr" class="on">Deep Clean</h3>
+          <h3 data-lang="en">Deep Cleaning</h3>
+
+          <p data-lang="fr" class="on">
+            Nettoyage en profondeur périodique, remise à niveau complète, ou logement très encrassé.
+          </p>
+          <p data-lang="en">
+            Periodic deep cleaning, full refresh, or heavily used properties.
+          </p>
+
+          <ul class="list" data-lang="fr" class="on">
+            <li>Dégraissage cuisine + détails</li>
+            <li>Joints, plinthes, zones difficiles</li>
+            <li>Options : four, frigo, vitres ext., terrasse</li>
+          </ul>
+          <ul class="list" data-lang="en">
+            <li>Kitchen degreasing + details</li>
+            <li>Grout, baseboards, hard-to-reach areas</li>
+            <li>Add-ons: oven, fridge, exterior windows, terrace</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="section" id="tarifs">
+      <h2 data-lang="fr" class="on">Tarifs indicatifs (MAD)</h2>
+      <h2 data-lang="en">Pricing (MAD)</h2>
+
+      <div class="pricing">
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th data-lang="fr" class="on">Type</th>
+                <th data-lang="en">Type</th>
+                <th data-lang="fr" class="on">Durée</th>
+                <th data-lang="en">Duration</th>
+                <th>Express</th>
+                <th data-lang="fr" class="on">Premium</th>
+                <th data-lang="en">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-lang="fr" class="on">Studio</td><td data-lang="en">Studio</td><td>1h–1h30</td><td>1h–1h30</td><td>200–280</td><td>260–360</td><td>260–360</td></tr>
+              <tr><td data-lang="fr" class="on">1 chambre</td><td data-lang="en">1 bedroom</td><td>1h30–2h30</td><td>1.5h–2.5h</td><td>280–380</td><td>360–480</td><td>360–480</td></tr>
+              <tr><td data-lang="fr" class="on">2 chambres</td><td data-lang="en">2 bedrooms</td><td>2h30–3h30</td><td>2.5h–3.5h</td><td>380–520</td><td>480–650</td><td>480–650</td></tr>
+              <tr><td data-lang="fr" class="on">3 chambres</td><td data-lang="en">3 bedrooms</td><td>3h30–4h30</td><td>3.5h–4.5h</td><td>520–700</td><td>650–900</td><td>650–900</td></tr>
+              <tr><td data-lang="fr" class="on">Villa</td><td data-lang="en">Villa</td><td>5h–8h</td><td>5h–8h</td><td>900–1800</td><td>1200–2400</td><td>1200–2400</td></tr>
+            </tbody>
+          </table>
+
+          <p class="note" data-lang="fr" class="on">
+            Tarifs “à partir de” : selon niveau de saleté, nombre de SDB, baies vitrées, extérieurs et options.
+          </p>
+          <p class="note" data-lang="en">
+            “Starting from” pricing: depends on condition, bathrooms, large windows, outdoor areas, and add-ons.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-lang="fr" class="on">Options</h3>
+          <h3 data-lang="en">Add-ons</h3>
+
+          <ul class="list" data-lang="fr" class="on">
+            <li><b>Option linge</b> : +60–120 DH / lit (ou forfait selon logement)</li>
+            <li><b>Consommables</b> : 15–40 DH / séjour</li>
+            <li><b>Four</b> : +80–150 DH • <b>Frigo</b> : +50–100 DH</li>
+            <li><b>Terrasse / BBQ</b> : +80–250 DH • <b>Vitres ext.</b> : sur devis</li>
+          </ul>
+          <ul class="list" data-lang="en">
+            <li><b>Linen service</b>: +60–120 MAD / bed (or package by property)</li>
+            <li><b>Guest consumables</b>: 15–40 MAD / stay</li>
+            <li><b>Oven</b>: +80–150 • <b>Fridge</b>: +50–100</li>
+            <li><b>Terrace / BBQ</b>: +80–250 • <b>Exterior windows</b>: quoted</li>
+          </ul>
+
+          <p class="note" data-lang="fr" class="on">Conciergeries : tarifs dégressifs à partir de 10 turnovers/mois.</p>
+          <p class="note" data-lang="en">Managers: volume discounts from 10 turnovers/month.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="section" id="process">
+      <h2 data-lang="fr" class="on">Process (simple & pro)</h2>
+      <h2 data-lang="en">Process (simple & professional)</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3 data-lang="fr" class="on">1) Planification</h3>
+          <h3 data-lang="en">1) Scheduling</h3>
+          <p data-lang="fr" class="on">Tu envoies check-out/check-in. On confirme l’heure d’arrivée + accès (clé/lockbox).</p>
+          <p data-lang="en">You share check-out/check-in. We confirm arrival time + access (key/lockbox).</p>
+        </div>
+        <div class="card">
+          <h3 data-lang="fr" class="on">2) Checklist standard</h3>
+          <h3 data-lang="en">2) Standard checklist</h3>
+          <p data-lang="fr" class="on">Checklist par type de logement + focus zones critiques (SDB, cuisine, literie).</p>
+          <p data-lang="en">Checklist by property type + focus on critical zones (bathroom, kitchen, bedding).</p>
+        </div>
+        <div class="card">
+          <h3 data-lang="fr" class="on">3) Photos & remontées</h3>
+          <h3 data-lang="en">3) Photos & reporting</h3>
+          <p data-lang="fr" class="on">Photos fin de prestation + signalement immédiat : dégâts, manque linge, objets oubliés.</p>
+          <p data-lang="en">End-of-service photos + instant reporting: damages, missing items, left-behind objects.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+      <h2 data-lang="fr" class="on">Demande de devis</h2>
+      <h2 data-lang="en">Request a quote</h2>
+
+      <div class="card">
+        <p class="note" style="margin-top:0" data-lang="fr" class="on">
+          Remplis ce formulaire : il ouvre ton mail avec le message prêt à envoyer. Tu peux aussi demander le devis sur WhatsApp.
+        </p>
+        <p class="note" style="margin-top:0" data-lang="en">
+          Fill this form to open an email with a pre-written message. You can also request a quote via WhatsApp.
+        </p>
+
+        <div class="ctaRow" style="margin-top:0">
+          <a class="btn wa" id="waBtn2" href="#"><span class="iconDot"></span>
+            <span data-lang="fr" class="on">WhatsApp – Devis rapide</span>
+            <span data-lang="en">WhatsApp – Quick quote</span>
+          </a>
+          <a class="btn" id="callBtn" href="#">
+            <span data-lang="fr" class="on">Appeler</span>
+            <span data-lang="en">Call</span>
+          </a>
+        </div>
+
+        <form id="quoteForm">
+          <div class="form">
+            <input required name="name" data-ph-fr="Nom & prénom" data-ph-en="Full name" placeholder="Nom & prénom" />
+            <input required name="phone" data-ph-fr="Téléphone (WhatsApp)" data-ph-en="Phone (WhatsApp)" placeholder="Téléphone (WhatsApp)" />
+
+            <select required name="zone">
+              <option value="" data-fr="Zone" data-en="Area">Zone</option>
+              <option>Casablanca</option>
+              <option>Dar Bouazza</option>
+              <option>Ain Diab / Corniche</option>
+              <option>Maarif / Gauthier</option>
+              <option>Anfa / CIL</option>
+              <option data-fr="Autre (préciser)" data-en="Other (specify)">Autre (préciser)</option>
+            </select>
+
+            <select required name="type">
+              <option value="" data-fr="Type de logement" data-en="Property type">Type de logement</option>
+              <option data-fr="Studio" data-en="Studio">Studio</option>
+              <option data-fr="1 chambre" data-en="1 bedroom">1 chambre</option>
+              <option data-fr="2 chambres" data-en="2 bedrooms">2 chambres</option>
+              <option data-fr="3 chambres" data-en="3 bedrooms">3 chambres</option>
+              <option data-fr="Villa" data-en="Villa">Villa</option>
+            </select>
+
+            <input name="date" data-ph-fr="Date souhaitée (ex: 05/03/2026)" data-ph-en="Requested date (e.g., 05/03/2026)" placeholder="Date souhaitée (ex: 05/03/2026)" />
+
+            <select name="linge">
+              <option value="" data-fr="Option linge ?" data-en="Linen service?">Option linge ?</option>
+              <option data-fr="Oui" data-en="Yes">Oui</option>
+              <option data-fr="Non" data-en="No">Non</option>
+            </select>
+          </div>
+
+          <textarea name="details"
+            data-ph-fr="Détails: superficie, nb de SDB, état du logement, accès clés, options (four, frigo, terrasse...), horaires check-out/check-in"
+            data-ph-en="Details: size, bathrooms, condition, access (key/lockbox), add-ons (oven, fridge, terrace...), check-out/check-in times"
+            placeholder="Détails: superficie, nb de SDB, état du logement, accès clés, options (four, frigo, terrasse...), horaires check-out/check-in"></textarea>
+
+          <div class="ctaRow">
+            <button class="btn primary" type="submit">
+              <span data-lang="fr" class="on">Envoyer par email</span>
+              <span data-lang="en">Send by email</span>
+            </button>
+          </div>
+
+          <p class="small">© <span id="y"></span> RAM6 Premium Cleaning — <span data-lang="fr" class="on">Tous droits réservés.</span><span data-lang="en">All rights reserved.</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+        <div><b>RAM6 Premium Cleaning</b> — <span data-lang="fr" class="on">Turnover Airbnb/Booking</span><span data-lang="en">Airbnb/Booking turnovers</span></div>
+        <div class="small" data-lang="fr" class="on">Contact : à renseigner (tél/WhatsApp/email)</div>
+        <div class="small" data-lang="en">Contact: add your phone/WhatsApp/email</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ✅ REMPLACE ces 3 valeurs
+    const WHATSAPP_NUMBER = "+2126XXXXXXXX";   // ex: +212612345678
+    const PHONE_NUMBER    = "+2126XXXXXXXX";
+    const EMAIL_TO        = "contact@tondomaine.ma";
+
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Language switch (default FR)
+    let currentLang = "fr";
+    const btnFR = document.getElementById("btnFR");
+    const btnEN = document.getElementById("btnEN");
+
+    function applyLang(lang){
+      currentLang = lang;
+      btnFR.classList.toggle("active", lang === "fr");
+      btnEN.classList.toggle("active", lang === "en");
+
+      // Toggle blocks
+      document.querySelectorAll("[data-lang]").forEach(el=>{
+        const elLang = el.getAttribute("data-lang");
+        el.classList.toggle("on", elLang === lang);
+      });
+
+      // Update placeholders
+      document.querySelectorAll("input[data-ph-fr], textarea[data-ph-fr]").forEach(el=>{
+        el.placeholder = (lang === "fr") ? el.getAttribute("data-ph-fr") : el.getAttribute("data-ph-en");
+      });
+
+      // Update select first option labels if provided
+      document.querySelectorAll("select").forEach(sel=>{
+        const first = sel.querySelector("option[value='']");
+        if(first){
+          const fr = first.getAttribute("data-fr");
+          const en = first.getAttribute("data-en");
+          if(fr && en) first.textContent = (lang === "fr") ? fr : en;
+        }
+        // Update any option that has data-fr/en
+        sel.querySelectorAll("option").forEach(opt=>{
+          const fr = opt.getAttribute("data-fr");
+          const en = opt.getAttribute("data-en");
+          if(fr && en) opt.textContent = (lang === "fr") ? fr : en;
+        });
+      });
+
+      // Rebuild WhatsApp link with language-friendly text
+      setWhatsAppLinks();
+    }
+
+    btnFR.addEventListener("click", ()=>applyLang("fr"));
+    btnEN.addEventListener("click", ()=>applyLang("en"));
+
+    function waBase(){
+      return `https://wa.me/${WHATSAPP_NUMBER.replace(/\+/g,'').replace(/\s/g,'')}`;
+    }
+
+    function setWhatsAppLinks(){
+      const frText = "Bonjour RAM6 Premium Cleaning, je souhaite un devis pour un ménage turnover (Airbnb/Booking). Voici les infos :";
+      const enText = "Hello RAM6 Premium Cleaning, I’d like a quote for a turnover cleaning (Airbnb/Booking). Here are the details:";
+      const msg = (currentLang === "fr") ? frText : enText;
+
+      const link = `${waBase()}?text=${encodeURIComponent(msg)}`;
+      document.getElementById("waBtn").href  = link;
+      document.getElementById("waBtn2").href = link;
+    }
+
+    setWhatsAppLinks();
+    document.getElementById("callBtn").href = `tel:${PHONE_NUMBER}`;
+
+    // Email form
+    document.getElementById("quoteForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+
+      const frMsg =
+`Demande de devis – RAM6 Premium Cleaning
+Nom: ${data.get("name")}
+Téléphone: ${data.get("phone")}
+Zone: ${data.get("zone")}
+Type: ${data.get("type")}
+Date: ${data.get("date") || "-"}
+Option linge: ${data.get("linge") || "-"}
+Détails: ${data.get("details") || "-"}
+
+Merci de me confirmer le tarif et la disponibilité.`;
+
+      const enMsg =
+`Quote request – RAM6 Premium Cleaning
+Name: ${data.get("name")}
+Phone: ${data.get("phone")}
+Area: ${data.get("zone")}
+Property type: ${data.get("type")}
+Requested date: ${data.get("date") || "-"}
+Linen service: ${data.get("linge") || "-"}
+Details: ${data.get("details") || "-"}
+
+Please confirm pricing and availability.`;
+
+      const subject = encodeURIComponent((currentLang === "fr")
+        ? "Demande de devis – RAM6 Premium Cleaning"
+        : "Quote request – RAM6 Premium Cleaning");
+
+      const body = encodeURIComponent((currentLang === "fr") ? frMsg : enMsg);
+      window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+    });
+
+    // Initialize
+    applyLang("fr");
+  </script>
+</body>
+</html>
