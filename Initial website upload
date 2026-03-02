@@ -699,22 +699,4 @@ Name: ${data.get("name")}
 Phone: ${data.get("phone")}
 Area: ${data.get("zone")}
 Property type: ${data.get("type")}
-Requested date: ${data.get("date") || "-"}
-Linen service: ${data.get("linge") || "-"}
-Details: ${data.get("details") || "-"}
-
-Please confirm pricing and availability.`;
-
-      const subject = encodeURIComponent((currentLang === "fr")
-        ? "Demande de devis – RAM6 Premium Cleaning"
-        : "Quote request – RAM6 Premium Cleaning");
-
-      const body = encodeURIComponent((currentLang === "fr") ? frMsg : enMsg);
-      window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
-    });
-
-    // Initialize
-    applyLang("fr");
-  </script>
-</body>
-</html>
+Requested date: ${data.get("date")
