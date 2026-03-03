@@ -1,297 +1,886 @@
-<!doctype html>
+ <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RAM6 Premium Cleaning | Turnover Airbnb 5★</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAM6 Premium Cleaning | Turnover Airbnb 5★</title>
+  <meta name="description" content="RAM6 Premium Cleaning — Turnover Airbnb premium à Casablanca & Dar Bouazza. Standard hôtelier, finitions 5★, options photos et refill." />
 
-<style>
-:root{
---navy:#0f172a;
---teal:#007878;
---gold:#b08d40;
---ink:#111827;
---muted:#6b7280;
---bg:#ffffff;
---card:#f6f7fb;
---line:#e5e7eb;
-}
+  <style>
+    :root{
+      --navy:#0f172a;
+      --teal:#007878;
+      --gold:#b08d40;
+      --ink:#111827;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f6f7fb;
+      --line:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-background:var(--bg);
-color:var(--ink);
-line-height:1.5;
-}
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(140%) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0; gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; min-width:240px}
+    .brand img{height:78px;width:auto;display:block}
+    .brand .t strong{font-size:15px;letter-spacing:.3px}
+    .brand .t span{font-size:12px;color:var(--muted)}
+    .links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .links a{text-decoration:none;font-weight:700;font-size:13px;color:var(--ink);opacity:.9}
+    .links a:hover{color:var(--teal)}
 
-.wrap{max-width:1100px;margin:auto;padding:0 18px}
-header{
-position:sticky;
-top:0;
-background:white;
-border-bottom:1px solid var(--line);
-z-index:100;
-}
+    .cta{display:flex;gap:10px;align-items:center}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:11px 14px;border-radius:12px;
+      border:1px solid var(--line);
+      text-decoration:none;font-weight:800;font-size:13px;
+      background:#fff; cursor:pointer;
+    }
+    .btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn.ghost:hover{border-color:var(--teal); color:var(--teal)}
 
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:12px 0;
-}
+    .lang{
+      display:flex; gap:6px; align-items:center;
+      border:1px solid var(--line); border-radius:999px;
+      padding:4px; background:#fff;
+    }
+    .lang button{
+      border:0; background:transparent; cursor:pointer;
+      padding:8px 10px; border-radius:999px;
+      font-weight:900; font-size:12px; color:var(--muted);
+    }
+    .lang button.active{background:rgba(0,120,120,.10); color:var(--teal)}
 
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-}
+    .hero{
+      padding:54px 0 28px;
+      background:
+        radial-gradient(900px 300px at 10% 10%, rgba(0,120,120,.12), transparent 60%),
+        radial-gradient(700px 280px at 90% 20%, rgba(176,141,64,.12), transparent 55%),
+        linear-gradient(#fff, #fff);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+    h1{margin:0;font-size:44px;line-height:1.05;letter-spacing:-.6px}
+    .lead{margin:14px 0 0;color:var(--muted);font-size:16px;max-width:58ch}
 
-.brand img{
-height:70px;
-}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .badge{
+      font-size:12px;font-weight:900;
+      padding:8px 10px;border-radius:999px;
+      background:rgba(0,120,120,.08);
+      border:1px solid rgba(0,120,120,.18);
+      color:var(--teal);
+    }
+    .badge.gold{
+      background:rgba(176,141,64,.10);
+      border-color:rgba(176,141,64,.22);
+      color:var(--gold);
+    }
 
-.links a{
-margin:0 8px;
-font-weight:600;
-text-decoration:none;
-color:var(--ink);
-font-size:14px;
-}
+    .hero-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 14px 30px rgba(15,23,42,.06);
+    }
+    .hero-card h3{margin:0 0 10px;font-size:15px}
+    .hero-card ul{margin:0;padding-left:18px;color:var(--muted)}
+    .hero-card li{margin:6px 0}
+    .note{font-size:12px;color:var(--muted);margin-top:10px}
 
-.links a:hover{color:var(--teal)}
+    section{padding:34px 0}
+    .section-title{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}
+    .section-title h2{margin:0;font-size:28px;letter-spacing:-.3px}
+    .section-title p{margin:0;color:var(--muted);max-width:60ch}
 
-.btn{
-padding:10px 14px;
-border-radius:12px;
-border:1px solid var(--line);
-font-weight:700;
-text-decoration:none;
-font-size:13px;
-display:inline-block;
-}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .card h4{margin:0 0 8px;font-size:15px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
 
-.btn.primary{
-background:var(--teal);
-color:white;
-border-color:var(--teal);
-}
+    .pricing{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
 
-.hero{
-padding:60px 0 40px;
-background:
-radial-gradient(800px 300px at 10% 10%, rgba(0,120,120,.1), transparent 60%),
-radial-gradient(600px 200px at 90% 20%, rgba(176,141,64,.12), transparent 60%);
-}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+    th,td{padding:12px 12px;border-bottom:1px solid var(--line);font-size:13px}
+    th{background:#fff;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    tr:last-child td{border-bottom:0}
+    .price{font-weight:900;color:var(--navy)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:900;font-size:12px}
 
-h1{
-font-size:42px;
-margin:0;
-line-height:1.1;
-}
+    .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:12px;font-weight:900;color:var(--navy);margin:0 0 6px}
+    input,select,textarea{
+      width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--line);
+      font-size:14px;outline:none;background:#fff;
+    }
+    input:focus,select:focus,textarea:focus{border-color:rgba(0,120,120,.6);box-shadow:0 0 0 4px rgba(0,120,120,.12)}
+    textarea{min-height:104px;resize:vertical}
 
-.lead{
-color:var(--muted);
-margin-top:16px;
-max-width:600px;
-}
+    .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+    .opt{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:14px;border:1px solid var(--line);background:#fff}
+    .opt input{width:18px;height:18px;margin-top:2px}
+    .opt strong{display:block;font-size:13px}
+    .opt span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
 
-.badges{
-margin-top:20px;
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
+    .slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+    .slot{
+      padding:10px;border-radius:12px;border:1px solid var(--line);
+      background:#fff;font-weight:900;font-size:12px;cursor:pointer;text-align:center
+    }
+    .slot[aria-disabled="true"]{opacity:.35;cursor:not-allowed}
+    .slot.active{border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,120,120,.12)}
+    .hint{font-size:12px;color:var(--muted);margin-top:8px}
 
-.badge{
-padding:8px 12px;
-border-radius:999px;
-background:rgba(0,120,120,.1);
-color:var(--teal);
-font-size:12px;
-font-weight:700;
-}
+    footer{padding:26px 0 40px;border-top:1px solid var(--line);background:#fff}
+    .foot{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .legal{font-size:12px;color:var(--muted)}
 
-section{
-padding:40px 0;
-}
-
-h2{
-margin-bottom:10px;
-font-size:28px;
-}
-
-.card{
-background:var(--card);
-padding:18px;
-border-radius:16px;
-border:1px solid var(--line);
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-}
-
-th,td{
-padding:12px;
-border-bottom:1px solid var(--line);
-text-align:left;
-}
-
-th{
-font-size:12px;
-color:var(--muted);
-text-transform:uppercase;
-}
-
-.price{
-font-weight:800;
-color:var(--navy);
-}
-
-footer{
-margin-top:40px;
-padding:30px 0;
-border-top:1px solid var(--line);
-font-size:13px;
-color:var(--muted);
-}
-</style>
+    .twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .pricing{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      .slots{grid-template-columns:repeat(2,1fr)}
+      .twoCol{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .brand img{height:72px}
+    }
+  </style>
 </head>
 
 <body>
-
 <header>
-<div class="wrap nav">
-<div class="brand">
-<img src="logo-r6.png" alt="RAM6 Logo"/>
-<div>
-<strong>RAM6 Premium Cleaning</strong><br>
-<span style="font-size:12px;color:var(--muted)">
-Turnover Airbnb 5★ • Casablanca & Dar Bouazza
-</span>
-</div>
-</div>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="logo-r6.png" alt="Logo RAM6 (R6)" />
+      <div class="t">
+        <strong>RAM6 Premium Cleaning</strong><br/>
+        <span data-i18n="tagline">Turnover Airbnb 5★ • Casablanca & Dar Bouazza</span>
+      </div>
+    </div>
 
-<div class="links">
-<a href="#services">Services</a>
-<a href="#tarifs">Tarifs</a>
-<a href="#contact">Contact</a>
-</div>
+    <nav class="links">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#tarifs" data-i18n="nav_pricing">Tarifs</a>
+      <a href="#checklist" data-i18n="nav_checklist">Checklist</a>
+      <a href="#reservation" data-i18n="nav_booking">Réservation</a>
+    </nav>
 
-<a class="btn primary" 
-href="https://wa.me/212661459557?text=Bonjour%20je%20souhaite%20un%20devis%20RAM6%20Premium%20Cleaning">
-WhatsApp
-</a>
-</div>
+    <div class="cta">
+      <div class="lang" aria-label="Language switch">
+        <button id="btnFR" class="active" type="button">FR</button>
+        <button id="btnEN" type="button">EN</button>
+      </div>
+      <a class="btn ghost" href="mailto:Ram6premiumcleaning@gmail.com" data-i18n="email_btn">Email</a>
+      <a class="btn primary" id="waTop" href="#" data-i18n="wa_btn">WhatsApp</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-<div class="wrap">
-<h1>
-Un turnover Airbnb <span style="color:var(--teal)">prêt check-in</span>,
-pensé pour vos <span style="color:var(--gold)">notes 5★</span>.
-</h1>
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 data-i18n="hero_title">
+          Un turnover Airbnb prêt check-in, pensé pour vos notes 5★.
+        </h1>
+        <p class="lead" data-i18n="hero_lead">
+          Standard hôtelier, finitions nettes, protocole rigoureux. RAM6 protège votre réputation et sécurise l’expérience de vos hôtes.
+        </p>
 
-<p class="lead">
-Standard hôtelier, finitions nettes, protocole strict.
-RAM6 protège votre réputation et sécurise votre expérience hôte.
-</p>
+        <div class="badges">
+          <span class="badge" data-i18n="b1">Gazinière incluse</span>
+          <span class="badge" data-i18n="b2">Poubelle lavée</span>
+          <span class="badge gold" data-i18n="b3">Option photos</span>
+          <span class="badge gold" data-i18n="b4">Option refill</span>
+        </div>
 
-<div class="badges">
-<div class="badge">Gazinière incluse</div>
-<div class="badge">Poubelle lavée</div>
-<div class="badge">Contrôle final</div>
-<div class="badge">Report photo en option</div>
-</div>
-</div>
-</section>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="#reservation" data-i18n="book_now">Réserver</a>
+          <a class="btn ghost" href="#tarifs" data-i18n="see_prices">Voir tarifs</a>
+        </div>
 
-<section id="services">
-<div class="wrap">
-<h2>Pourquoi RAM6</h2>
-<div class="card">
-Standard hôtelier structuré, discipline opérationnelle,
-finition irréprochable et transparence totale.
-Nous ne faisons pas "propre".
-Nous faisons propre + constant.
-</div>
-</div>
-</section>
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <span class="pill" data-i18n="p1">✔ Standard 8 étapes</span>
+          <span class="pill" data-i18n="p2">✔ Contrôle final</span>
+          <span class="pill" data-i18n="p3">✔ Objets oubliés : photo au propriétaire</span>
+        </div>
+      </div>
 
-<section id="tarifs">
-<div class="wrap">
-<h2>Tarifs</h2>
+      <div class="hero-card">
+        <h3 data-i18n="standard_title">Standard RAM6 (inclus)</h3>
+        <ul>
+          <li data-i18n="s1">Cuisine complète (évier, surfaces, électroménager accessible, <b>gazinière</b>)</li>
+          <li data-i18n="s2">Salle de bain désinfectée (WC, lavabo, douche) + <b>poubelle lavée</b></li>
+          <li data-i18n="s3">Sols & dépoussiérage (salon, chambres)</li>
+          <li data-i18n="s4">Lits refaits & espace prêt à accueillir</li>
+          <li data-i18n="s5">Frigo : vidage + nettoyage simple</li>
+          <li data-i18n="s6">Machine à café : vidage + nettoyage simple</li>
+          <li data-i18n="s7">Objets oubliés : sachet fermé + photo au propriétaire</li>
+        </ul>
+        <p class="note" data-i18n="standard_note">
+          Produits professionnels RAM6. Zéro serpillière humide laissée, zéro odeur.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<table>
-<tr>
-<th>Type de logement</th>
-<th>Prix (MAD)</th>
-</tr>
+  <section id="services">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 data-i18n="why_title">Pourquoi RAM6</h2>
+        <p data-i18n="why_sub">On ne fait pas “juste propre”. On fait propre + constant, avec un contrôle et des finitions qui protègent votre note.</p>
+      </div>
 
-<tr>
-<td><strong>Studio (1 chambre)</strong></td>
-<td class="price">190</td>
-</tr>
+      <div class="cards">
+        <div class="card">
+          <h4 data-i18n="c1t">Standard hôtelier</h4>
+          <p data-i18n="c1p">Finitions nettes, contrôle final, focus sur les points qui déclenchent les mauvais avis.</p>
+        </div>
+        <div class="card">
+          <h4 data-i18n="c2t">Process & fiabilité</h4>
+          <p data-i18n="c2p">Protocole 8 étapes, gestion des consignes, suivi clair de la prestation.</p>
+        </div>
+        <div class="card">
+          <h4 data-i18n="c3t">Options premium</h4>
+          <p data-i18n="c3p">Report photos, refill, pressing, vitres, canapé (sur demande).</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<tr>
-<td><strong>2 chambres</strong></td>
-<td class="price">220</td>
-</tr>
+  <section id="tarifs">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 data-i18n="pricing_title">Tarifs</h2>
+        <p data-i18n="pricing_sub">Tarifs turnover (hors options). Studio = 1 chambre (usage Maroc). Ajustements selon SDB, terrasses et spécificités.</p>
+      </div>
 
-<tr>
-<td><strong>3 chambres</strong></td>
-<td class="price">260</td>
-</tr>
+      <div class="pricing">
+        <div class="box">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="col_type">Type de logement</th>
+                <th data-i18n="col_price">Prix (MAD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><b data-i18n="t_studio">Studio (1 chambre)</b></td><td class="price">190</td></tr>
+              <tr><td><b data-i18n="t_2">2 chambres</b></td><td class="price">220</td></tr>
+              <tr><td><b data-i18n="t_3">3 chambres</b></td><td class="price">260</td></tr>
+              <tr><td><b data-i18n="t_4">4 chambres</b></td><td class="price">290</td></tr>
+              <tr><td><b data-i18n="t_villa">Villa</b> <span data-i18n="villa_note">(selon chambres/étages)</span></td><td class="price" data-i18n="quote">Sur devis</td></tr>
+            </tbody>
+          </table>
 
-<tr>
-<td><strong>4 chambres</strong></td>
-<td class="price">290</td>
-</tr>
+          <p class="note" data-i18n="rules">
+            Règles : +20 MAD / SDB • +20 MAD / terrasse (si plus d’une) • Jardin (saleté apparente) : +20 MAD.
+          </p>
+          <p class="note"><span class="pill" data-i18n="loyalty_tag">Fidélité</span> <span data-i18n="loyalty_text">Après 5 passages, le 6ᵉ est à -50%.</span></p>
+        </div>
 
-<tr>
-<td><strong>Villa</strong></td>
-<td class="price">Sur devis</td>
-</tr>
-</table>
+        <div class="box">
+          <h3 style="margin:0 0 10px;font-size:15px" data-i18n="options_title">Options (sur demande)</h3>
 
-<p style="margin-top:15px;color:var(--muted);font-size:13px;">
-+20 MAD / salle de bain • +20 MAD / terrasse • Jardin : +20 MAD<br>
-Après 5 passages, le 6ᵉ est à -50%.
-</p>
+          <div class="opts">
+            <div class="opt">
+              <input type="checkbox" disabled />
+              <div>
+                <strong data-i18n="o1t">Report photos</strong>
+                <span data-i18n="o1p">10 photos avant + 10 après.</span>
+              </div>
+            </div>
+            <div class="opt">
+              <input type="checkbox" disabled />
+              <div>
+                <strong data-i18n="o2t">Refill essentials</strong>
+                <span data-i18n="o2p">Sacs poubelle, eau, café/thé/sucre, PQ…</span>
+              </div>
+            </div>
+            <div class="opt">
+              <input type="checkbox" disabled />
+              <div>
+                <strong data-i18n="o3t">Vitres / baies</strong>
+                <span data-i18n="o3p">Selon surface.</span>
+              </div>
+            </div>
+            <div class="opt">
+              <input type="checkbox" disabled />
+              <div>
+                <strong data-i18n="o4t">Canapé</strong>
+                <span data-i18n="o4p">Sur devis.</span>
+              </div>
+            </div>
+            <div class="opt">
+              <input type="checkbox" disabled />
+              <div>
+                <strong data-i18n="o5t">Pressing</strong>
+                <span data-i18n="o5p">Coordination (collecte/dépôt/retour).</span>
+              </div>
+            </div>
+          </div>
 
-</div>
-</section>
+          <p class="hint" data-i18n="options_hint">Les options deviennent sélectionnables dans le formulaire de réservation ci-dessous.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-<div class="wrap">
-<h2>Contact</h2>
+  <section id="checklist">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 data-i18n="check_title">Checklist & engagements</h2>
+        <p data-i18n="check_sub">Transparence totale : inclus vs options. Vos hôtes entrent dans un logement prêt à accueillir.</p>
+      </div>
 
-<div class="card">
-Email : 
-<a href="mailto:Ram6premiumcleaning@gmail.com">
-Ram6premiumcleaning@gmail.com
-</a><br><br>
+      <div class="box">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="col_zone">Zone</th>
+              <th data-i18n="col_included">Standard inclus</th>
+              <th data-i18n="col_opt">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b data-i18n="z_kitchen">Cuisine</b></td>
+              <td data-i18n="k_in">Vaisselle (laver + ranger), surfaces, évier, <b>gazinière</b>, frigo (vidage + simple), poubelle, sols</td>
+              <td data-i18n="k_opt">Refill, vitres</td>
+            </tr>
+            <tr>
+              <td><b data-i18n="z_bath">Salle de bain</b></td>
+              <td data-i18n="b_in">WC, lavabo, douche, serviettes à disposition, sols, <b>poubelle lavée</b></td>
+              <td data-i18n="b_opt">Refill</td>
+            </tr>
+            <tr>
+              <td><b data-i18n="z_bed">Chambres</b></td>
+              <td data-i18n="bed_in">Lits refaits, dépoussiérage, sols, mise en ordre</td>
+              <td data-i18n="bed_opt">Pressing</td>
+            </tr>
+            <tr>
+              <td><b data-i18n="z_living">Salon</b></td>
+              <td data-i18n="l_in">Dépoussiérage, sols, mise en ordre</td>
+              <td data-i18n="l_opt">Canapé</td>
+            </tr>
+            <tr>
+              <td><b data-i18n="z_forgot">Objets oubliés</b></td>
+              <td data-i18n="f_in">Sachet fermé + étiquetage + <b>photo envoyée au propriétaire</b></td>
+              <td data-i18n="f_opt">Retour (sur accord)</td>
+            </tr>
+          </tbody>
+        </table>
 
-WhatsApp / Tel : 
-<a href="tel:+212661459557">
-+212 661 459 557
-</a>
-</div>
-</div>
-</section>
+        <p class="note" data-i18n="check_note">
+          RAM6 utilise ses propres produits pro et repart avec le matériel — pas d’odeurs, pas de serpillières mouillées laissées sur place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservation">
+    <div class="wrap">
+      <div class="section-title">
+        <h2 data-i18n="book_title">Réservation</h2>
+        <p data-i18n="book_sub">Choisissez une date + un créneau. Les créneaux grisés sont déjà pris (sur cet appareil). Confirmation finale par WhatsApp / Email.</p>
+      </div>
+
+      <div class="pricing">
+        <div class="box">
+          <form id="bookingForm">
+            <div class="form-grid">
+              <div>
+                <label for="name" data-i18n="f_name">Nom</label>
+                <input id="name" name="name" placeholder="Yassine" required />
+              </div>
+              <div>
+                <label for="phone" data-i18n="f_phone">Téléphone (WhatsApp)</label>
+                <input id="phone" name="phone" placeholder="+2126..." required />
+              </div>
+
+              <div>
+                <label for="city" data-i18n="f_city">Ville</label>
+                <select id="city" name="city" required>
+                  <option value="" data-i18n="choose">Choisir</option>
+                  <option>Casablanca</option>
+                  <option>Dar Bouazza</option>
+                  <option data-i18n="other">Autre</option>
+                </select>
+              </div>
+              <div>
+                <label for="otherCity" data-i18n="f_other">Si “Autre”, préciser</label>
+                <input id="otherCity" name="otherCity" placeholder="Ex: Bouskoura" />
+              </div>
+
+              <div>
+                <label for="address" data-i18n="f_address">Adresse (facultatif)</label>
+                <input id="address" name="address" placeholder="Immeuble / résidence / quartier" />
+              </div>
+              <div>
+                <label for="type" data-i18n="f_type">Type de logement</label>
+                <select id="type" name="type" required>
+                  <option value="" data-i18n="choose">Choisir</option>
+                  <option data-i18n="t_studio">Studio (1 chambre)</option>
+                  <option data-i18n="t_2">2 chambres</option>
+                  <option data-i18n="t_3">3 chambres</option>
+                  <option data-i18n="t_4">4 chambres</option>
+                  <option data-i18n="t_villa">Villa</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="date" data-i18n="f_date">Date</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+
+              <div>
+                <label data-i18n="f_slot">Créneau</label>
+                <input id="slotInput" name="slot" placeholder="Sélectionnez un créneau ci-dessous" readonly required />
+                <div class="slots" id="slots"></div>
+                <div class="hint" data-i18n="slot_hint">Si vous changez de date, les créneaux se réinitialisent.</div>
+              </div>
+            </div>
+
+            <div style="margin-top:14px">
+              <label data-i18n="f_opts">Options (facultatives)</label>
+              <div class="opts">
+                <label class="opt">
+                  <input type="checkbox" name="opt_photos" value="Report photos (10 avant + 10 après)">
+                  <div><strong data-i18n="o1t">Report photos</strong><span data-i18n="o1p">10 photos avant + 10 après.</span></div>
+                </label>
+                <label class="opt">
+                  <input type="checkbox" name="opt_refill" value="Refill essentials (eau, sacs, café/thé/sucre, PQ…)">
+                  <div><strong data-i18n="o2t">Refill essentials</strong><span data-i18n="o2p">Sacs poubelle, eau, café/thé/sucre, PQ…</span></div>
+                </label>
+                <label class="opt">
+                  <input type="checkbox" name="opt_pressing" value="Pressing (coordination)">
+                  <div><strong data-i18n="o5t">Pressing</strong><span data-i18n="o5p">Coordination (collecte/dépôt/retour).</span></div>
+                </label>
+                <label class="opt">
+                  <input type="checkbox" name="opt_windows" value="Vitres / baies">
+                  <div><strong data-i18n="o3t">Vitres / baies</strong><span data-i18n="o3p">Selon surface.</span></div>
+                </label>
+                <label class="opt">
+                  <input type="checkbox" name="opt_sofa" value="Canapé (sur devis)">
+                  <div><strong data-i18n="o4t">Canapé</strong><span data-i18n="o4p">Sur devis.</span></div>
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-top:14px">
+              <label for="notes" data-i18n="f_notes">Notes / Consignes</label>
+              <textarea id="notes" name="notes" placeholder="Clés, code, consignes spécifiques, parking, etc."></textarea>
+            </div>
+
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <button type="submit" class="btn primary" data-i18n="send">Envoyer la demande</button>
+              <button type="button" class="btn ghost" id="markBooked" data-i18n="mark">Marquer ce créneau comme “pris”</button>
+            </div>
+
+            <p class="hint" data-i18n="calendar_note">
+              Pour une disponibilité multi-appareils (planning partagé), on pourra connecter un système de réservation plus tard.
+            </p>
+          </form>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 10px;font-size:15px" data-i18n="contact_title">Contact</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px">
+            <span data-i18n="email_lbl">Email</span> :
+            <a href="mailto:Ram6premiumcleaning@gmail.com">Ram6premiumcleaning@gmail.com</a><br/>
+            <span data-i18n="wa_lbl">WhatsApp / Tel</span> :
+            <a href="tel:+212661459557">+212 661 459 557</a>
+          </p>
+
+          <div style="height:12px"></div>
+          <h3 style="margin:0 0 10px;font-size:15px" data-i18n="loyalty_title">Fidélité</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px" data-i18n="loyalty_text2">
+            Après 5 passages, le 6ᵉ est à -50%.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-<div class="wrap">
-<strong>RAM6 Premium Cleaning</strong><br>
-Activité exercée sous statut Auto-Entrepreneur (المقاول الذاتي).<br>
-Titulaire : Rachid Ramssiss<br><br>
-© 2026 RAM6 Premium Cleaning
-</div>
+  <div class="wrap foot">
+    <div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="logo-r6.png" alt="Logo RAM6" style="height:54px;width:auto" />
+        <div>
+          <b>RAM6 Premium Cleaning</b><br/>
+          <span class="legal" data-i18n="tagline">Turnover Airbnb 5★ • Casablanca & Dar Bouazza</span>
+        </div>
+      </div>
+      <p class="legal" style="margin-top:12px" data-i18n="legal">
+        <b>Mentions légales :</b> Activité exercée sous statut Auto-Entrepreneur (المقاول الذاتي). Titulaire : Rachid Ramssiss.
+      </p>
+    </div>
+    <div class="legal">
+      <b data-i18n="contact_footer">Contact</b><br/>
+      Email : Ram6premiumcleaning@gmail.com<br/>
+      Tel/WhatsApp : +212 661 459 557<br/><br/>
+      © <span id="year"></span> RAM6 Premium Cleaning
+    </div>
+  </div>
 </footer>
 
+<script>
+  const WHATSAPP_NUMBER = "212661459557";
+  const EMAIL_TO = "Ram6premiumcleaning@gmail.com";
+
+  document.getElementById("waTop").href =
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Bonjour, je souhaite un devis RAM6 Premium Cleaning.")}`;
+
+  // --- Slots (simple availability on this device) ---
+  const SLOT_TIMES = ["09:00","11:00","14:00","16:00","18:00","20:00"];
+  const slotsEl = document.getElementById("slots");
+  const dateEl = document.getElementById("date");
+  const slotInput = document.getElementById("slotInput");
+
+  function keyFor(dateStr){ return `ram6_booked_${dateStr}`; }
+  function getBooked(dateStr){
+    try{ return JSON.parse(localStorage.getItem(keyFor(dateStr)) || "[]"); }
+    catch(e){ return []; }
+  }
+  function setBooked(dateStr, arr){ localStorage.setItem(keyFor(dateStr), JSON.stringify(arr)); }
+
+  function renderSlots(){
+    const d = dateEl.value;
+    slotsEl.innerHTML = "";
+    slotInput.value = "";
+    if(!d) return;
+    const booked = new Set(getBooked(d));
+    SLOT_TIMES.forEach(t=>{
+      const b = document.createElement("button");
+      b.type="button"; b.className="slot"; b.textContent=t;
+      const isBooked = booked.has(t);
+      b.setAttribute("aria-disabled", isBooked ? "true" : "false");
+      if(isBooked) b.disabled = true;
+      b.addEventListener("click", ()=>{
+        [...slotsEl.querySelectorAll(".slot")].forEach(x=>x.classList.remove("active"));
+        b.classList.add("active");
+        slotInput.value = t;
+      });
+      slotsEl.appendChild(b);
+    });
+  }
+
+  // Min date = today
+  const today = new Date();
+  const pad = (n)=>String(n).padStart(2,"0");
+  const iso = `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+  dateEl.min = iso;
+  dateEl.addEventListener("change", renderSlots);
+
+  document.getElementById("markBooked").addEventListener("click", ()=>{
+    const d = dateEl.value, s = slotInput.value;
+    if(!d || !s){ alert("Choisissez une date et un créneau avant de marquer comme pris."); return; }
+    const booked = new Set(getBooked(d));
+    booked.add(s);
+    setBooked(d, [...booked]);
+    renderSlots();
+    alert("Créneau marqué comme pris (sur cet appareil).");
+  });
+
+  document.getElementById("bookingForm").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const fd = new FormData(e.target);
+
+    const name = fd.get("name") || "";
+    const phone = fd.get("phone") || "";
+    const city = fd.get("city") || "";
+    const otherCity = fd.get("otherCity") || "";
+    const address = fd.get("address") || "";
+    const type = fd.get("type") || "";
+    const date = fd.get("date") || "";
+    const slot = fd.get("slot") || "";
+    const notes = fd.get("notes") || "";
+
+    const opts = [];
+    ["opt_photos","opt_refill","opt_pressing","opt_windows","opt_sofa"].forEach(k=>{
+      if(fd.get(k)) opts.push(fd.get(k));
+    });
+
+    const cityFinal = (city === "Autre" && otherCity) ? `Autre: ${otherCity}` : city;
+
+    const message =
+`Demande de réservation – RAM6 Premium Cleaning
+Nom: ${name}
+Téléphone: ${phone}
+Ville: ${cityFinal}
+Adresse: ${address || "—"}
+Type logement: ${type}
+
+Date: ${date}
+Créneau: ${slot}
+
+Options: ${opts.length ? opts.join(", ") : "Aucune"}
+
+Notes/consignes: ${notes || "—"}`;
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+
+    const subject = encodeURIComponent("Demande réservation – RAM6 Premium Cleaning");
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // --- i18n (FR/EN) ---
+  const dict = {
+    fr:{
+      tagline:"Turnover Airbnb 5★ • Casablanca & Dar Bouazza",
+      nav_services:"Services", nav_pricing:"Tarifs", nav_checklist:"Checklist", nav_booking:"Réservation",
+      email_btn:"Email", wa_btn:"WhatsApp",
+      hero_title:"Un turnover Airbnb prêt check-in, pensé pour vos notes 5★.",
+      hero_lead:"Standard hôtelier, finitions nettes, protocole rigoureux. RAM6 protège votre réputation et sécurise l’expérience de vos hôtes.",
+      b1:"Gazinière incluse", b2:"Poubelle lavée", b3:"Option photos", b4:"Option refill",
+      book_now:"Réserver", see_prices:"Voir tarifs",
+      p1:"✔ Standard 8 étapes", p2:"✔ Contrôle final", p3:"✔ Objets oubliés : photo au propriétaire",
+      standard_title:"Standard RAM6 (inclus)",
+      s1:"Cuisine complète (évier, surfaces, électroménager accessible, <b>gazinière</b>)",
+      s2:"Salle de bain désinfectée (WC, lavabo, douche) + <b>poubelle lavée</b>",
+      s3:"Sols & dépoussiérage (salon, chambres)",
+      s4:"Lits refaits & espace prêt à accueillir",
+      s5:"Frigo : vidage + nettoyage simple",
+      s6:"Machine à café : vidage + nettoyage simple",
+      s7:"Objets oubliés : sachet fermé + photo au propriétaire",
+      standard_note:"Produits professionnels RAM6. Zéro serpillière humide laissée, zéro odeur.",
+      why_title:"Pourquoi RAM6",
+      why_sub:"On ne fait pas “juste propre”. On fait propre + constant, avec un contrôle et des finitions qui protègent votre note.",
+      c1t:"Standard hôtelier", c1p:"Finitions nettes, contrôle final, focus sur les points qui déclenchent les mauvais avis.",
+      c2t:"Process & fiabilité", c2p:"Protocole 8 étapes, gestion des consignes, suivi clair de la prestation.",
+      c3t:"Options premium", c3p:"Report photos, refill, pressing, vitres, canapé (sur demande).",
+      pricing_title:"Tarifs",
+      pricing_sub:"Tarifs turnover (hors options). Studio = 1 chambre (usage Maroc). Ajustements selon SDB, terrasses et spécificités.",
+      col_type:"Type de logement", col_price:"Prix (MAD)",
+      t_studio:"Studio (1 chambre)", t_2:"2 chambres", t_3:"3 chambres", t_4:"4 chambres", t_villa:"Villa",
+      villa_note:"(selon chambres/étages)", quote:"Sur devis",
+      rules:"Règles : +20 MAD / SDB • +20 MAD / terrasse (si plus d’une) • Jardin (saleté apparente) : +20 MAD.",
+      loyalty_tag:"Fidélité", loyalty_text:"Après 5 passages, le 6ᵉ est à -50%.",
+      options_title:"Options (sur demande)", options_hint:"Les options deviennent sélectionnables dans le formulaire de réservation ci-dessous.",
+      o1t:"Report photos", o1p:"10 photos avant + 10 après.",
+      o2t:"Refill essentials", o2p:"Sacs poubelle, eau, café/thé/sucre, PQ…",
+      o3t:"Vitres / baies", o3p:"Selon surface.",
+      o4t:"Canapé", o4p:"Sur devis.",
+      o5t:"Pressing", o5p:"Coordination (collecte/dépôt/retour).",
+      check_title:"Checklist & engagements", check_sub:"Transparence totale : inclus vs options. Vos hôtes entrent dans un logement prêt à accueillir.",
+      col_zone:"Zone", col_included:"Standard inclus", col_opt:"Options",
+      z_kitchen:"Cuisine", k_in:"Vaisselle (laver + ranger), surfaces, évier, <b>gazinière</b>, frigo (vidage + simple), poubelle, sols", k_opt:"Refill, vitres",
+      z_bath:"Salle de bain", b_in:"WC, lavabo, douche, serviettes à disposition, sols, <b>poubelle lavée</b>", b_opt:"Refill",
+      z_bed:"Chambres", bed_in:"Lits refaits, dépoussiérage, sols, mise en ordre", bed_opt:"Pressing",
+      z_living:"Salon", l_in:"Dépoussiérage, sols, mise en ordre", l_opt:"Canapé",
+      z_forgot:"Objets oubliés", f_in:"Sachet fermé + étiquetage + <b>photo envoyée au propriétaire</b>", f_opt:"Retour (sur accord)",
+      check_note:"RAM6 utilise ses propres produits pro et repart avec le matériel — pas d’odeurs, pas de serpillières mouillées laissées sur place.",
+      book_title:"Réservation", book_sub:"Choisissez une date + un créneau. Les créneaux grisés sont déjà pris (sur cet appareil). Confirmation finale par WhatsApp / Email.",
+      f_name:"Nom", f_phone:"Téléphone (WhatsApp)", f_city:"Ville", f_other:"Si “Autre”, préciser", f_address:"Adresse (facultatif)", f_type:"Type de logement",
+      f_date:"Date", f_slot:"Créneau", slot_hint:"Si vous changez de date, les créneaux se réinitialisent.",
+      f_opts:"Options (facultatives)", f_notes:"Notes / Consignes",
+      choose:"Choisir", other:"Autre",
+      send:"Envoyer la demande", mark:"Marquer ce créneau comme “pris”",
+      calendar_note:"Pour une disponibilité multi-appareils (planning partagé), on pourra connecter un système de réservation plus tard.",
+      contact_title:"Contact", email_lbl:"Email", wa_lbl:"WhatsApp / Tel",
+      loyalty_title:"Fidélité", loyalty_text2:"Après 5 passages, le 6ᵉ est à -50%.",
+      legal:"<b>Mentions légales :</b> Activité exercée sous statut Auto-Entrepreneur (المقاول الذاتي). Titulaire : Rachid Ramssiss.",
+      contact_footer:"Contact"
+    },
+    en:{
+      tagline:"Airbnb 5★ turnover • Casablanca & Dar Bouazza",
+      nav_services:"Services", nav_pricing:"Pricing", nav_checklist:"Checklist", nav_booking:"Booking",
+      email_btn:"Email", wa_btn:"WhatsApp",
+      hero_title:"A ready-for-check-in Airbnb turnover built for 5★ ratings.",
+      hero_lead:"Hotel-level finish, crisp results, strict process. RAM6 protects your reputation and your guest experience.",
+      b1:"Stove cleaning included", b2:"Trash bin washed", b3:"Photo report option", b4:"Refill option",
+      book_now:"Book now", see_prices:"See pricing",
+      p1:"✔ 8-step standard", p2:"✔ Final QC", p3:"✔ Left items: photo to owner",
+      standard_title:"RAM6 Standard (included)",
+      s1:"Full kitchen (sink, surfaces, accessible appliances, <b>stove</b>)",
+      s2:"Sanitized bathroom (WC, sink, shower) + <b>bin washed</b>",
+      s3:"Floors & dusting (living room, bedrooms)",
+      s4:"Beds made & space guest-ready",
+      s5:"Fridge: emptied + basic clean",
+      s6:"Coffee machine: emptied + basic clean",
+      s7:"Left items: sealed bag + photo to owner",
+      standard_note:"RAM6 uses professional products. No wet mop left behind, no bad odors.",
+      why_title:"Why RAM6",
+      why_sub:"Not just clean. Clean + consistent, with QC and hotel-level finishing that protects your rating.",
+      c1t:"Hotel standard", c1p:"Crisp finishing, final QC, focus on review-killers.",
+      c2t:"Process & reliability", c2p:"8-step protocol, clear instructions handling, consistent delivery.",
+      c3t:"Premium options", c3p:"Photo report, refill, pressing, windows, sofa (on request).",
+      pricing_title:"Pricing",
+      pricing_sub:"Turnover pricing (excluding options). Studio = 1 bedroom (Morocco usage). Adjustments apply.",
+      col_type:"Property type", col_price:"Price (MAD)",
+      t_studio:"Studio (1 bedroom)", t_2:"2 bedrooms", t_3:"3 bedrooms", t_4:"4 bedrooms", t_villa:"Villa",
+      villa_note:"(depends on rooms/floors)", quote:"Quote",
+      rules:"Rules: +20 MAD / bathroom • +20 MAD / terrace (if more than one) • Garden (visible litter): +20 MAD.",
+      loyalty_tag:"Loyalty", loyalty_text:"After 5 visits, the 6th is 50% off.",
+      options_title:"Options (on request)", options_hint:"Options are selectable in the booking form below.",
+      o1t:"Photo report", o1p:"10 before + 10 after.",
+      o2t:"Essentials refill", o2p:"Trash bags, water, coffee/tea/sugar, toilet paper…",
+      o3t:"Windows / glass", o3p:"Depends on surface.",
+      o4t:"Sofa", o4p:"Quote.",
+      o5t:"Laundry/pressing", o5p:"Coordination (pickup/drop/return).",
+      check_title:"Checklist & commitments", check_sub:"Full transparency: what’s included vs optional.",
+      col_zone:"Area", col_included:"Included", col_opt:"Options",
+      z_kitchen:"Kitchen", k_in:"Dishes (wash + put away), surfaces, sink, <b>stove</b>, fridge (empty + basic), bin, floors", k_opt:"Refill, windows",
+      z_bath:"Bathroom", b_in:"WC, sink, shower, towels set, floors, <b>bin washed</b>", b_opt:"Refill",
+      z_bed:"Bedrooms", bed_in:"Beds made, dusting, floors, tidy-up", bed_opt:"Laundry/pressing",
+      z_living:"Living room", l_in:"Dusting, floors, tidy-up", l_opt:"Sofa",
+      z_forgot:"Left items", f_in:"Sealed bag + label + <b>photo to owner</b>", f_opt:"Return (upon approval)",
+      check_note:"RAM6 brings its own pro products and removes equipment—no wet mop left behind, no unpleasant smells.",
+      book_title:"Booking", book_sub:"Pick a date + slot. Grey slots are already taken (on this device). Final confirmation via WhatsApp / Email.",
+      f_name:"Name", f_phone:"Phone (WhatsApp)", f_city:"City", f_other:"If “Other”, specify", f_address:"Address (optional)", f_type:"Property type",
+      f_date:"Date", f_slot:"Time slot", slot_hint:"Changing the date resets the slots.",
+      f_opts:"Optional add-ons", f_notes:"Notes / instructions",
+      choose:"Choose", other:"Other",
+      send:"Send request", mark:"Mark slot as taken",
+      calendar_note:"For multi-device shared availability, we can connect a real booking system later.",
+      contact_title:"Contact", email_lbl:"Email", wa_lbl:"WhatsApp / Phone",
+      loyalty_title:"Loyalty", loyalty_text2:"After 5 visits, the 6th is 50% off.",
+      legal:"<b>Legal:</b> Activity operated under Auto-Entrepreneur status (Morocco). Holder: Rachid Ramssiss.",
+      contact_footer:"Contact"
+    }
+  };
+
+  function setLang(lang){
+    const data = dict[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const k = el.getAttribute("data-i18n");
+      if(!data[k]) return;
+      el.innerHTML = data[k];
+    });
+
+    document.getElementById("btnFR").classList.toggle("active", lang==="fr");
+    document.getElementById("btnEN").classList.toggle("active", lang==="en");
+  }
+
+  document.getElementById("btnFR").addEventListener("click", ()=>setLang("fr"));
+  document.getElementById("btnEN").addEventListener("click", ()=>setLang("en"));
+
+  // --- Slots (simple availability on this device) ---
+  const SLOT_TIMES = ["09:00","11:00","14:00","16:00","18:00","20:00"];
+  const slotsEl = document.getElementById("slots");
+  const dateEl = document.getElementById("date");
+  const slotInput = document.getElementById("slotInput");
+
+  function keyFor(dateStr){ return `ram6_booked_${dateStr}`; }
+  function getBooked(dateStr){
+    try{ return JSON.parse(localStorage.getItem(keyFor(dateStr)) || "[]"); }
+    catch(e){ return []; }
+  }
+  function setBooked(dateStr, arr){ localStorage.setItem(keyFor(dateStr), JSON.stringify(arr)); }
+
+  function renderSlots(){
+    const d = dateEl.value;
+    slotsEl.innerHTML = "";
+    slotInput.value = "";
+    if(!d) return;
+    const booked = new Set(getBooked(d));
+    SLOT_TIMES.forEach(t=>{
+      const b = document.createElement("button");
+      b.type="button"; b.className="slot"; b.textContent=t;
+      const isBooked = booked.has(t);
+      b.setAttribute("aria-disabled", isBooked ? "true" : "false");
+      if(isBooked) b.disabled = true;
+      b.addEventListener("click", ()=>{
+        [...slotsEl.querySelectorAll(".slot")].forEach(x=>x.classList.remove("active"));
+        b.classList.add("active");
+        slotInput.value = t;
+      });
+      slotsEl.appendChild(b);
+    });
+  }
+
+  // Min date = today
+  const today = new Date();
+  const pad = (n)=>String(n).padStart(2,"0");
+  const iso = `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+  dateEl.min = iso;
+  dateEl.addEventListener("change", renderSlots);
+
+  document.getElementById("markBooked").addEventListener("click", ()=>{
+    const d = dateEl.value, s = slotInput.value;
+    if(!d || !s){ alert("Choisissez une date et un créneau avant de marquer comme pris."); return; }
+    const booked = new Set(getBooked(d));
+    booked.add(s);
+    setBooked(d, [...booked]);
+    renderSlots();
+    alert("Créneau marqué comme pris (sur cet appareil).");
+  });
+
+  document.getElementById("bookingForm").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const fd = new FormData(e.target);
+
+    const name = fd.get("name") || "";
+    const phone = fd.get("phone") || "";
+    const city = fd.get("city") || "";
+    const otherCity = fd.get("otherCity") || "";
+    const address = fd.get("address") || "";
+    const type = fd.get("type") || "";
+    const date = fd.get("date") || "";
+    const slot = fd.get("slot") || "";
+    const notes = fd.get("notes") || "";
+
+    const opts = [];
+    ["opt_photos","opt_refill","opt_pressing","opt_windows","opt_sofa"].forEach(k=>{
+      if(fd.get(k)) opts.push(fd.get(k));
+    });
+
+    const cityFinal = (city === "Autre" && otherCity) ? `Autre: ${otherCity}` : city;
+
+    const message =
+`Demande de réservation – RAM6 Premium Cleaning
+Nom: ${name}
+Téléphone: ${phone}
+Ville: ${cityFinal}
+Adresse: ${address || "—"}
+Type logement: ${type}
+
+Date: ${date}
+Créneau: ${slot}
+
+Options: ${opts.length ? opts.join(", ") : "Aucune"}
+
+Notes/consignes: ${notes || "—"}`;
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+
+    const subject = encodeURIComponent("Demande réservation – RAM6 Premium Cleaning");
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // default FR
+  setLang("fr");
+</script>
 </body>
-</html> 
+</html>
