@@ -2,911 +2,1204 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RAM6 Premium Cleaning | Airbnb Turnover | Casablanca & Dar Bouazza</title>
-  <meta name="description" content="RAM6 Premium Cleaning — Nettoyage premium clé-en-main pour Airbnb & locations courte durée à Casablanca & Dar Bouazza. Check-in ready, photos avant/après, options conciergerie." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAM6 Premium Cleaning | Airbnb Turnover Casablanca & Dar Bouazza</title>
+  <meta name="description" content="RAM6 Premium Cleaning : ménage premium clé-en-main pour Airbnb & locations courte durée à Casablanca et Dar Bouazza. Créneaux réservables, options, checklist transparente." />
 
   <style>
     :root{
       --bg:#ffffff;
       --surface:#ffffff;
-      --ink:#0B1320;
-      --muted:#516072;
-      --line:rgba(11,19,32,.10);
+      --ink:#0b1220;
+      --muted:#5c6b80;
+      --line: rgba(15, 23, 42, .10);
 
-      --gold:#B08D57;
-      --gold2:#D2B07A;
+      --gold:#b38b45;
+      --gold2:#d7b46a;
+      --teal:#0f8a8a;
+      --teal2:#0aa1a1;
 
-      --shadow: 0 10px 30px rgba(11,19,32,.08);
-      --radius:18px;
-      --radius2:26px;
-      --max:1100px;
+      --shadow: 0 18px 55px rgba(2, 6, 23, .10);
+      --shadow2: 0 10px 28px rgba(2, 6, 23, .10);
+      --radius: 20px;
+      --radius2: 28px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--ink);
-      line-height:1.45;
-    }
-
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:18px}
+    img{max-width:100%;display:block}
+
+    .container{width:min(1150px, calc(100% - 36px)); margin:0 auto}
     .topbar{
       position:sticky; top:0; z-index:50;
-      background: rgba(255,255,255,.92);
+      background:rgba(255,255,255,.78);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-    .topbar .row{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      padding:10px 18px;
-      max-width: var(--max);
-      margin:0 auto;
-    }
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand img{width:72px;height:72px;object-fit:contain}
+    .brand-title{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+    .brand-title strong{font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+    .brand-title span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width: 220px;
+    .nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border:1px solid var(--line);
+      border-radius:999px;background:#fff; text-decoration:none;
+      font-size:13px;color:var(--ink);
     }
-    /* ✅ Logo plus grand */
-    .logo{
-      height:54px; width:auto;
-      display:block;
-      border-radius:12px;
-    }
-    .brandText{
-      display:flex; flex-direction:column; gap:2px;
-    }
-    .brandText b{font-size:14px; letter-spacing:.2px}
-    .brandText span{font-size:12px; color:var(--muted)}
-
-    .nav{
-      display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
-    .nav a{
-      text-decoration:none;
-      font-size:13px;
-      color:var(--muted);
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid transparent;
-    }
-    .nav a:hover{border-color:var(--line); color:var(--ink)}
-    .pill{
-      border:1px solid var(--line);
-      padding:8px 10px;
-      border-radius:999px;
-      display:flex; gap:8px; align-items:center;
-      background:#fff;
-    }
-    .langBtn{
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius:999px;
-      padding:8px 10px;
-      font-size:13px;
-      cursor:pointer;
-      color:var(--muted);
-    }
-    .langBtn.active{color:var(--ink); border-color: rgba(176,141,87,.45)}
+    .chip:hover{box-shadow:0 10px 20px rgba(2,6,23,.08)}
     .cta{
-      background: linear-gradient(135deg, var(--gold), var(--gold2));
-      color:#111;
       border:none;
+      background:linear-gradient(135deg, var(--teal), var(--teal2));
+      color:#fff;
       padding:10px 14px;
       border-radius:999px;
       font-weight:700;
       text-decoration:none;
-      box-shadow: 0 10px 20px rgba(176,141,87,.25);
-      font-size:13px;
-      display:inline-flex; align-items:center; gap:8px;
+      box-shadow: 0 16px 30px rgba(15,138,138,.25);
     }
-    .cta:active{transform: translateY(1px)}
+    .cta:hover{filter:brightness(1.02)}
 
+    /* Hero */
     .hero{
-      padding:28px 0 10px;
+      padding:34px 0 18px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
     }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:18px;
+    .hero:before{
+      content:"";
+      position:absolute; inset:-220px -120px auto -120px;
+      height:520px;
+      background:
+        radial-gradient(closest-side, rgba(15,138,138,.12), transparent 65%),
+        radial-gradient(closest-side, rgba(179,139,69,.12), transparent 70%);
+      filter: blur(0px);
+      transform: rotate(-6deg);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid; gap:18px;
+      grid-template-columns: 1.15fr .85fr;
       align-items:stretch;
     }
-    @media (max-width: 900px){
-      .heroGrid{grid-template-columns:1fr}
-      .brandText span{display:none}
-      .logo{height:48px}
+    @media (max-width: 940px){
+      .hero-grid{grid-template-columns: 1fr}
+      .nav{display:none}
+      .brand img{width:64px;height:64px}
     }
 
-    .card{
-      background: var(--surface);
-      border: 1px solid var(--line);
+    .hero-card{
+      background: rgba(255,255,255,.92);
+      border:1px solid var(--line);
       border-radius: var(--radius2);
       box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid rgba(179,139,69,.25);
+      background: linear-gradient(180deg, rgba(179,139,69,.10), rgba(255,255,255,.9));
+      font-weight:700;
+      color:#3a2b12;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      width:fit-content;
+    }
+    h1{margin:12px 0 10px;font-size:44px;line-height:1.04;letter-spacing:-.02em}
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .sub{color:var(--muted);font-size:16px;line-height:1.55;margin:0 0 16px}
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:14px;text-decoration:none;
+      border:1px solid var(--line);
+      background:#fff;
+      font-weight:800;
+      box-shadow: 0 12px 24px rgba(2,6,23,.08);
+    }
+    .btn.primary{
+      border:none;
+      background:linear-gradient(135deg, var(--ink), #2b2f3a);
+      color:#fff;
+    }
+    .btn.gold{
+      border:1px solid rgba(179,139,69,.30);
+      background:linear-gradient(135deg, rgba(179,139,69,.10), rgba(255,255,255,.95));
+    }
+    .hero-metrics{display:grid;gap:10px;grid-template-columns:repeat(3,1fr);margin-top:14px}
+    .metric{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+      background:#fff;
+    }
+    .metric strong{display:block;font-size:18px}
+    .metric span{color:var(--muted);font-size:12px}
+
+    /* Right panel */
+    .side{
+      display:flex;flex-direction:column;gap:12px;
+    }
+    .side-card{
+      background:#fff;border:1px solid var(--line);
+      border-radius: var(--radius2);
       padding:18px;
+      box-shadow: var(--shadow2);
     }
-
-    h1{
-      margin:0 0 10px;
-      font-size:34px;
-      letter-spacing:-.4px;
-      line-height:1.05;
-    }
-    .sub{
-      margin:0 0 14px;
-      color:var(--muted);
-      font-size:15px;
-    }
-    .badges{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;
-    }
+    .stars{display:flex;gap:4px;align-items:center}
+    .star{width:16px;height:16px}
+    .side-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
     .badge{
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(15,138,138,.25);
+      background: rgba(15,138,138,.08);
+      color: #064a4a;
+      font-weight:800;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .mini{margin:10px 0 0;color:var(--muted);line-height:1.5;font-size:14px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{
+      padding:9px 10px;border-radius:999px;
       border:1px solid var(--line);
-      padding:8px 10px;
-      border-radius:999px;
-      color:var(--muted);
-      font-size:13px;
       background:#fff;
+      font-weight:700;
+      font-size:12px;
+      color:var(--ink);
     }
 
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
-    @media (max-width: 900px){ .grid2{grid-template-columns:1fr} }
-
-    .section{padding:14px 0}
-    .section h2{
-      margin:0 0 10px;
-      font-size:20px;
-      letter-spacing:-.2px;
+    /* Sections */
+    section{padding:22px 0}
+    .section-title{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+      margin-bottom:14px;
     }
+    .section-title h2{margin:0;font-size:26px;letter-spacing:-.01em}
+    .section-title p{margin:0;color:var(--muted);max-width:680px;line-height:1.55}
+
+    .grid-3{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+    .grid-2{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 920px){ .grid-3{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} }
+
+    .card{
+      background:#fff;border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:16px;
+      box-shadow: 0 12px 24px rgba(2,6,23,.06);
+    }
+    .card h3{margin:8px 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+    .icon{
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(15,138,138,.15), rgba(179,139,69,.12));
+      border:1px solid rgba(2,6,23,.06);
+    }
+    .icon svg{width:22px;height:22px}
+
+    /* Pricing */
+    .price-wrap{display:grid;gap:12px;grid-template-columns: 1fr .95fr}
+    @media (max-width: 920px){ .price-wrap{grid-template-columns:1fr} }
+
+    .price-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:16px;border:1px solid var(--line)}
+    .price-table th,.price-table td{padding:12px 12px;border-bottom:1px solid var(--line);font-size:14px}
+    .price-table th{background:rgba(2,6,23,.03);text-align:left}
+    .price-table tr:last-child td{border-bottom:none}
     .muted{color:var(--muted)}
-
-    .priceGrid{
-      display:grid; grid-template-columns: repeat(4,1fr); gap:12px;
+    .note{
+      padding:12px 12px;border-radius:16px;border:1px dashed rgba(179,139,69,.35);
+      background: rgba(179,139,69,.06);
+      color:#3a2b12;
+      font-size:13px;
+      line-height:1.5;
     }
-    @media (max-width: 900px){ .priceGrid{grid-template-columns:1fr 1fr} }
-    @media (max-width: 520px){ .priceGrid{grid-template-columns:1fr} }
 
-    .price{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding:14px;
-      background:#fff;
-    }
-    .price b{display:block; font-size:15px}
-    .price .p{margin-top:6px; font-size:22px; font-weight:800}
-    .price .p small{font-size:12px; font-weight:600; color:var(--muted)}
-    .price ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
-    .price li{margin:6px 0}
+    /* Checklist */
+    .checklist{display:grid;gap:12px;grid-template-columns: 1fr}
+    .check-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .check-head .tag{padding:8px 10px;border-radius:999px;border:1px solid rgba(15,138,138,.25);background:rgba(15,138,138,.08);font-weight:800;font-size:12px;color:#064a4a}
 
-    table{
+    .table{
       width:100%;
-      border-collapse: collapse;
-      overflow:hidden;
-      border-radius: var(--radius);
+      border-collapse:separate;border-spacing:0;
       border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
       background:#fff;
     }
-    th,td{
-      border-bottom:1px solid var(--line);
-      padding:10px 10px;
-      font-size:13px;
-      vertical-align:top;
-    }
-    th{
-      text-align:left;
-      background: rgba(176,141,87,.08);
-      font-size:13px;
-    }
-    tr:last-child td{border-bottom:none}
+    .table th,.table td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+    .table th{background:rgba(2,6,23,.03);text-align:left}
+    .table tr:last-child td{border-bottom:none}
+    .table td ul{margin:0;padding-left:18px;color:var(--muted)}
+    .table td li{margin:4px 0}
 
-    .formGrid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    @media (max-width: 900px){ .formGrid{grid-template-columns:1fr} }
+    /* Form */
+    .form{
+      display:grid;gap:12px;grid-template-columns: 1fr;
+    }
+    .form-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 720px){ .form-grid{grid-template-columns:1fr} }
 
-    label{display:block; font-size:13px; color:var(--muted); margin:0 0 6px}
-    input, select, textarea{
+    label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:800;letter-spacing:.02em}
+    input,select,textarea{
       width:100%;
       padding:12px 12px;
-      border-radius: 14px;
       border:1px solid var(--line);
-      background:#fff;
-      color:var(--ink);
-      font-size:14px;
+      border-radius:14px;
       outline:none;
-    }
-    textarea{min-height:110px; resize:vertical}
-
-    .optRow{
-      display:flex; gap:10px; align-items:flex-start;
-      border:1px solid var(--line);
-      border-radius: 14px;
-      padding:10px 12px;
       background:#fff;
-    }
-    .optRow input{width:auto; margin-top:3px}
-    .optRow b{font-size:14px}
-    .optRow span{display:block; color:var(--muted); font-size:12.5px; margin-top:3px}
-
-    .btnRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-    .btn{
-      border:none; cursor:pointer;
-      border-radius: 999px;
-      padding:12px 14px;
-      font-weight:800;
-      background: linear-gradient(135deg, var(--gold), var(--gold2));
-      color:#111;
-      text-decoration:none;
-      display:inline-flex; align-items:center; gap:8px;
-    }
-    .btn2{
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius:999px;
-      padding:12px 14px;
-      font-weight:800;
+      font-size:14px;
       color:var(--ink);
-      text-decoration:none;
     }
-    .fineprint{font-size:12px; color:var(--muted); margin-top:10px}
+    input:focus,select:focus,textarea:focus{box-shadow:0 0 0 4px rgba(15,138,138,.12);border-color:rgba(15,138,138,.35)}
+    textarea{min-height:96px;resize:vertical}
 
+    .options{
+      display:grid;gap:10px;
+      grid-template-columns:repeat(2,1fr);
+    }
+    @media (max-width: 720px){ .options{grid-template-columns:1fr} }
+    .opt{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:12px;border-radius:16px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .opt input{width:auto;margin-top:3px}
+    .opt strong{display:block;font-size:13px}
+    .opt span{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:2px}
+
+    .summary{
+      display:grid;gap:10px;
+      border:1px solid var(--line);
+      background:rgba(2,6,23,.02);
+      border-radius:16px;
+      padding:12px;
+    }
+    .summary-row{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:13px}
+    .summary-row strong{color:var(--ink)}
+    .summary-total{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px solid var(--line);padding-top:10px}
+    .summary-total strong{font-size:16px}
+    .summary-total span{font-size:16px;font-weight:900}
+
+    .form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .form-actions button{
+      cursor:pointer;border:none;
+      padding:12px 14px;border-radius:14px;
+      font-weight:900;
+    }
+    .send-wa{background:linear-gradient(135deg, var(--teal), var(--teal2));color:#fff; box-shadow: 0 16px 30px rgba(15,138,138,.22)}
+    .send-mail{background:#fff;border:1px solid var(--line);color:var(--ink)}
+    .smallprint{color:var(--muted);font-size:12px;line-height:1.45;margin:8px 0 0}
+
+    /* Floating WhatsApp */
+    .wa-float{
+      position:fixed; right:14px; bottom:14px; z-index:80;
+      display:flex;align-items:center;gap:10px;
+      background:linear-gradient(135deg, var(--teal), var(--teal2));
+      color:#fff;text-decoration:none;
+      padding:12px 14px;border-radius:999px;
+      box-shadow: 0 20px 42px rgba(15,138,138,.30);
+      font-weight:900;
+    }
+    .wa-float svg{width:18px;height:18px}
     .footer{
+      padding:24px 0 34px;
       border-top:1px solid var(--line);
-      margin-top:18px;
-      padding:18px 0 30px;
       color:var(--muted);
       font-size:13px;
     }
+    .footer-grid{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+    .legal{max-width:820px;line-height:1.5}
   </style>
 </head>
 
 <body>
   <div class="topbar">
-    <div class="row">
+    <div class="container topbar-inner">
       <div class="brand">
-        <!-- ✅ logo-r6.png doit être au même niveau que index.html -->
-        <img class="logo" src="logo-r6.png" alt="R6 Premium Cleaning" />
-        <div class="brandText">
-          <b>RAM6 Premium Cleaning</b>
-          <span>Airbnb Turnover • Casablanca & Dar Bouazza</span>
+        <img src="logo-r6.png" alt="R6 Premium Cleaning logo" />
+        <div class="brand-title">
+          <strong>RAM6 Premium Cleaning</strong>
+          <span>Ménage premium Airbnb • Casablanca & Dar Bouazza</span>
         </div>
       </div>
 
       <div class="nav">
-        <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#prix" data-i18n="nav_prices">Tarifs</a>
-        <a href="#checklist" data-i18n="nav_checklist">Checklist</a>
-        <a href="#devis" data-i18n="nav_quote">Devis</a>
-
-        <div class="pill" aria-label="Language">
-          <button class="langBtn active" id="btnFR" type="button">FR</button>
-          <button class="langBtn" id="btnEN" type="button">EN</button>
-        </div>
-
-        <a class="cta" id="whatsCtaTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="chip" href="#services">Services</a>
+        <a class="chip" href="#tarifs">Tarifs</a>
+        <a class="chip" href="#checklist">Checklist</a>
+        <a class="chip" href="#reservation">Réservation</a>
+        <a class="cta" href="#reservation">Réserver</a>
       </div>
     </div>
   </div>
 
-  <div class="wrap hero" id="top">
-    <div class="heroGrid">
-      <div class="card">
-        <h1 data-i18n="h1">Nettoyage premium “check-in ready” pour locations courte durée</h1>
-        <p class="sub" data-i18n="sub">
-          Un service clé-en-main pour que vos voyageurs entrent dans un logement impeccable, frais et sans mauvaises surprises.
-          Nous venons avec nos produits premium, nos consommables et une méthode standardisée — zéro serpillère humide laissée, zéro odeur désagréable.
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <div class="kicker">Premium • Calme • Fiable</div>
+        <h1>Turnover Airbnb impeccable, sans stress.</h1>
+        <p class="sub">
+          RAM6 Premium Cleaning assure un <strong>ménage professionnel</strong> et une <strong>expérience “hôtel”</strong> pour vos voyageurs.
+          Checklist claire, photos avant/après, et créneaux de réservation.
         </p>
 
-        <div class="badges">
-          <div class="badge" data-i18n="b1">✅ 10 photos avant + 10 photos après</div>
-          <div class="badge" data-i18n="b2">✅ Linge & mise en place (selon votre stock)</div>
-          <div class="badge" data-i18n="b3">✅ Sacs “objets oubliés” + photo au propriétaire</div>
-          <div class="badge" data-i18n="b4">✅ Intervention Casablanca & Dar Bouazza</div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#reservation">Demander un créneau</a>
+          <a class="btn gold" href="#checklist">Voir la checklist</a>
+          <a class="btn" href="#tarifs">Voir les tarifs</a>
         </div>
 
-        <div class="btnRow" style="margin-top:14px">
-          <a class="btn" href="#devis" data-i18n="cta_quote">Demander un devis</a>
-          <a class="btn2" id="whatsCtaHero" href="#" target="_blank" rel="noopener" data-i18n="cta_whats">Réserver sur WhatsApp</a>
-        </div>
-
-        <div class="fineprint" data-i18n="fp1">
-          Offre fidélité : à partir du 5ᵉ passage, le 6ᵉ est à -50% (même logement, même format).
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>+20 photos</strong>
+            <span>10 avant / 10 après (sur demande)</span>
+          </div>
+          <div class="metric">
+            <strong>Produits premium</strong>
+            <span>odeur fraîche, zéro “serpillère”</span>
+          </div>
+          <div class="metric">
+            <strong>Fidélité</strong>
+            <span>La 6ème à -50% (après 5 passages)</span>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <h2 data-i18n="quick_title">Demande rapide</h2>
-        <p class="muted" style="margin-top:0" data-i18n="quick_sub">Recevez une confirmation et un prix final selon votre logement.</p>
-
-        <form id="quickForm">
-          <div class="formGrid">
-            <div>
-              <label for="qName" data-i18n="f_name">Nom</label>
-              <input id="qName" name="name" placeholder="Ex: Asmaa" required />
+      <div class="side">
+        <div class="side-card">
+          <div class="side-title">
+            <div class="stars" aria-label="5 étoiles">
+              <svg class="star" viewBox="0 0 24 24" fill="#b38b45"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.6 9 9z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="#b38b45"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.6 9 9z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="#b38b45"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.6 9 9z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="#b38b45"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.6 9 9z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="#b38b45"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.6 9 9z"/></svg>
             </div>
-            <div>
-              <label for="qPhone" data-i18n="f_phone">Téléphone</label>
-              <input id="qPhone" name="phone" placeholder="Ex: 06..." required />
-            </div>
-            <div>
-              <label for="qZone" data-i18n="f_zone">Zone</label>
-              <select id="qZone" name="zone" required>
-                <option value="" selected disabled>—</option>
-                <option>Casablanca</option>
-                <option>Dar Bouazza</option>
-                <option>Autre (à préciser)</option>
-              </select>
-            </div>
-            <div>
-              <label for="qType" data-i18n="f_type">Type de logement</label>
-              <select id="qType" name="type" required>
-                <option value="" selected disabled>—</option>
-                <option data-i18n="t_studio">Studio</option>
-                <option data-i18n="t_1br">1 chambre</option>
-                <option data-i18n="t_2br">2 chambres</option>
-                <option data-i18n="t_3br">3 chambres</option>
-                <option data-i18n="t_villa">Villa</option>
-              </select>
-            </div>
-
-            <!-- ✅ Calendrier propre : date + heure (pas de texte interne) -->
-            <div>
-              <label for="qDate" data-i18n="f_date">Date</label>
-              <input id="qDate" name="date" type="date" required />
-            </div>
-            <div>
-              <label for="qTime" data-i18n="f_time">Heure</label>
-              <input id="qTime" name="time" type="time" required />
-            </div>
+            <div class="badge">Airbnb-ready</div>
           </div>
-
-          <div style="margin-top:10px">
-            <label for="qDetails" data-i18n="f_details">Détails</label>
-            <textarea id="qDetails" name="details" placeholder="Ex: 2 SDB, terrasse, check-out à 11h, check-in à 15h..."></textarea>
-          </div>
-
-          <div class="btnRow">
-            <button class="btn" type="submit" data-i18n="send">Envoyer</button>
-            <a class="btn2" id="whatsCtaQuick" href="#" target="_blank" rel="noopener" data-i18n="cta_whats">WhatsApp</a>
-          </div>
-
-          <div class="fineprint" data-i18n="fp2">
-            Nous répondons rapidement avec la disponibilité et le tarif exact (selon chambres / SDB / terrasses).
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="section" id="services">
-      <h2 data-i18n="s_title">Ce que comprend le Standard (le plus demandé)</h2>
-      <div class="grid2">
-        <div class="card">
-          <p class="muted" style="margin-top:0" data-i18n="std_intro">
-            Notre objectif : un logement “check-in ready”. Propre, frais, rangé, sans trace ni odeur.  
-            Nous venons avec nos produits premium pour garantir une expérience optimale à vos voyageurs.
+          <p class="mini">
+            Un rendu <strong>propre, aligné, lumineux</strong> — et une communication claire avec le propriétaire.
+            <br/><br/>
+            <strong>Objets oubliés :</strong> mise sous sachet fermé + photo envoyée au propriétaire.
           </p>
-          <ul class="muted" style="margin:0; padding-left:18px">
-            <li data-i18n="std1">Cuisine : plan de travail, évier, robinetterie, micro-ondes, surfaces, <b>gazinière/plaques</b>, vaisselle (lavage + rangement).</li>
-            <li data-i18n="std2">Salles de bain : WC, lavabo, douche/baignoire, miroirs, robinetterie, désinfection zones clés.</li>
-            <li data-i18n="std3">Chambres & salon : lits faits (selon votre linge), remise en ordre, dépoussiérage, sols.</li>
-            <li data-i18n="std4">Frigo : vider ce qui reste + nettoyage simple (surfaces).</li>
-            <li data-i18n="std5">Poubelles : vider + <b>lavage de la poubelle</b> (point critique en Airbnb).</li>
-            <li data-i18n="std6">Machine à café : vider / rincer / nettoyage simple si présente.</li>
-            <li data-i18n="std7">Finition : contrôle visuel, aération, <b>aucun matériel humide/odeur laissés</b>.</li>
-            <li data-i18n="std8">Objets oubliés : mis dans un sachet fermé, étiqueté + photo envoyée au propriétaire.</li>
-            <li data-i18n="std9"><b>Photos :</b> 10 avant + 10 après (état des lieux et preuve de passage).</li>
-          </ul>
+          <div class="pillrow">
+            <div class="pill">Cuisine & Gazinière</div>
+            <div class="pill">SDB & WC</div>
+            <div class="pill">Sols & Poussières</div>
+            <div class="pill">Lits & Salon</div>
+            <div class="pill">Poubelles + lavage poubelle</div>
+          </div>
         </div>
 
-        <div class="card">
-          <h2 style="margin-top:0" data-i18n="opt_title">Options (sur demande)</h2>
-
-          <!-- ✅ Options sélectionnables (checkbox) -->
-          <div class="optRow">
-            <input type="checkbox" id="o1" name="opt" value="Refill basiques" form="quoteForm">
-            <div>
-              <b data-i18n="o1t">Refill basiques</b>
-              <span data-i18n="o1d">Sacs poubelles, eau, café/thé, sucre, papier toilette… selon votre liste.</span>
-            </div>
+        <div class="side-card">
+          <div class="side-title">
+            <strong>Contact</strong>
+            <span class="badge">Réponse rapide</span>
           </div>
-          <div class="optRow" style="margin-top:10px">
-            <input type="checkbox" id="o2" name="opt" value="Vitres / baies" form="quoteForm">
-            <div>
-              <b data-i18n="o2t">Vitres / baies</b>
-              <span data-i18n="o2d">Intérieur (et extérieur accessible) — idéal pour terrasses.</span>
-            </div>
-          </div>
-          <div class="optRow" style="margin-top:10px">
-            <input type="checkbox" id="o3" name="opt" value="Canapés (nettoyage)" form="quoteForm">
-            <div>
-              <b data-i18n="o3t">Canapés / textiles (nettoyage)</b>
-              <span data-i18n="o3d">Nettoyage textile sur devis (selon matière et niveau).</span>
-            </div>
-          </div>
-          <div class="optRow" style="margin-top:10px">
-            <input type="checkbox" id="o4" name="opt" value="Pressing & retour plié" form="quoteForm">
-            <div>
-              <b data-i18n="o4t">Pressing & retour plié</b>
-              <span data-i18n="o4d">Collecte / dépôt / retour du linge propre et plié (si souhaité).</span>
-            </div>
-          </div>
-
-          <p class="fineprint" data-i18n="opt_fp">
-            Les options sont facturées selon le temps et les fournitures. Nous confirmons toujours avant exécution.
+          <p class="mini">
+            WhatsApp : <strong>+212 661 459 557</strong><br/>
+            Email : <strong>Ram6premiumcleaning@gmail.com</strong>
           </p>
+          <div class="hero-actions" style="margin-top:10px">
+            <a class="btn" href="mailto:Ram6premiumcleaning@gmail.com">Envoyer un email</a>
+            <a class="btn primary" href="#reservation">Réserver</a>
+          </div>
         </div>
       </div>
     </div>
+  </header>
 
-    <div class="section" id="prix">
-      <h2 data-i18n="p_title">Tarifs indicatifs (à confirmer selon configuration)</h2>
-
-      <div class="priceGrid">
-        <div class="price">
-          <b data-i18n="p1t">Studio</b>
-          <div class="p">160 <small>MAD</small></div>
-          <ul>
-            <li data-i18n="p_note1">Standard “check-in ready”</li>
-            <li data-i18n="p_note2">10 photos avant + 10 après</li>
-          </ul>
-        </div>
-        <div class="price">
-          <b data-i18n="p2t">1 chambre</b>
-          <div class="p">190 <small>MAD</small></div>
-          <ul>
-            <li data-i18n="p_note1">Standard “check-in ready”</li>
-            <li data-i18n="p_note2">10 photos avant + 10 après</li>
-          </ul>
-        </div>
-        <div class="price">
-          <b data-i18n="p3t">2 chambres</b>
-          <div class="p">220 <small>MAD</small></div>
-          <ul>
-            <li data-i18n="p_note1">Standard “check-in ready”</li>
-            <li data-i18n="p_note2">10 photos avant + 10 après</li>
-          </ul>
-        </div>
-        <div class="price">
-          <b data-i18n="p4t">3 chambres</b>
-          <div class="p">260 <small>MAD</small></div>
-          <ul>
-            <li data-i18n="p_note1">Standard “check-in ready”</li>
-            <li data-i18n="p_note2">10 photos avant + 10 après</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:12px">
-        <h2 style="margin-top:0" data-i18n="p_rules">Règles simples (transparentes)</h2>
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n="th_item">Élément</th>
-              <th data-i18n="th_rule">Règle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="r1a">Chambre supplémentaire</td>
-              <td data-i18n="r1b">+40 MAD par chambre</td>
-            </tr>
-            <tr>
-              <td data-i18n="r2a">Salle de bain supplémentaire</td>
-              <td data-i18n="r2b">+30 MAD par SDB</td>
-            </tr>
-            <tr>
-              <td data-i18n="r3a">Terrasse supplémentaire</td>
-              <td data-i18n="r3b">+30 MAD par terrasse (si + d’une)</td>
-            </tr>
-            <tr>
-              <td data-i18n="r4a">Jardin (saleté apparente)</td>
-              <td data-i18n="r4b">+30 MAD (ramassage simple : papiers / déchets visibles)</td>
-            </tr>
-            <tr>
-              <td data-i18n="r5a">Villa</td>
-              <td data-i18n="r5b">Sur devis (étages, chambres, SDB, extérieurs)</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="fineprint" data-i18n="p_disclaimer">
-          Tarifs indicatifs. Nous confirmons le prix final selon la taille, le temps estimé et les options.
-        </div>
-      </div>
-    </div>
-
-    <div class="section" id="checklist">
-      <h2 data-i18n="c_title">Checklist — nos engagements (clair et précis)</h2>
-      <div class="card">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n="c_col1">Zone</th>
-              <th data-i18n="c_col2">Standard inclus</th>
-              <th data-i18n="c_col3">Options</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="c1a"><b>Cuisine</b></td>
-              <td data-i18n="c1b">Vaisselle (lavage + rangement), plan de travail, évier, robinetterie, surfaces, micro-ondes, <b>gazinière/plaques</b>, sol.</td>
-              <td data-i18n="c1c">Refill basiques, rangement avancé, nettoyage profond sur devis.</td>
-            </tr>
-            <tr>
-              <td data-i18n="c2a"><b>Salle(s) de bain</b></td>
-              <td data-i18n="c2b">WC, lavabo, douche/baignoire, miroirs, désinfection zones clés, sol, serviettes à disposition (selon stock).</td>
-              <td data-i18n="c2c">Vitres/miroirs avancés, détartrage profond sur devis.</td>
-            </tr>
-            <tr>
-              <td data-i18n="c3a"><b>Chambres & salon</b></td>
-              <td data-i18n="c3b">Lits faits (selon linge), remise en ordre, dépoussiérage, surfaces, sols.</td>
-              <td data-i18n="c3c">Textile/canapés, pressing & retour plié.</td>
-            </tr>
-            <tr>
-              <td data-i18n="c4a"><b>Frigo</b></td>
-              <td data-i18n="c4b">Vider ce qui reste + nettoyage simple.</td>
-              <td data-i18n="c4c">Nettoyage profond sur devis.</td>
-            </tr>
-            <tr>
-              <td data-i18n="c5a"><b>Poubelles</b></td>
-              <td data-i18n="c5b">Vider + <b>lavage de la poubelle</b>.</td>
-              <td data-i18n="c5c">Refill sacs, re-stock.</td>
-            </tr>
-            <tr>
-              <td data-i18n="c6a"><b>Contrôle qualité</b></td>
-              <td data-i18n="c6b"><b>10 photos avant + 10 après</b>, aération, finition, aucun matériel humide/odeur laissés.</td>
-              <td data-i18n="c6c">Rapport détaillé sur demande.</td>
-            </tr>
-            <tr>
-              <td data-i18n="c7a"><b>Objets oubliés</b></td>
-              <td data-i18n="c7b">Sachet fermé, étiqueté + photo envoyée au propriétaire.</td>
-              <td data-i18n="c7c">Dépôt / remise (sur accord).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section" id="devis">
-      <h2 data-i18n="q_title">Demande de devis (détails + options)</h2>
-
-      <div class="card">
-        <form id="quoteForm">
-          <div class="formGrid">
-            <div>
-              <label for="name" data-i18n="f_name">Nom</label>
-              <input id="name" name="name" required />
-            </div>
-            <div>
-              <label for="phone" data-i18n="f_phone">Téléphone</label>
-              <input id="phone" name="phone" required />
-            </div>
-            <div>
-              <label for="zone" data-i18n="f_zone">Zone</label>
-              <select id="zone" name="zone" required>
-                <option value="" selected disabled>—</option>
-                <option>Casablanca</option>
-                <option>Dar Bouazza</option>
-                <option>Autre (à préciser)</option>
-              </select>
-            </div>
-            <div>
-              <label for="type" data-i18n="f_type">Type de logement</label>
-              <select id="type" name="type" required>
-                <option value="" selected disabled>—</option>
-                <option data-i18n="t_studio">Studio</option>
-                <option data-i18n="t_1br">1 chambre</option>
-                <option data-i18n="t_2br">2 chambres</option>
-                <option data-i18n="t_3br">3 chambres</option>
-                <option data-i18n="t_villa">Villa</option>
-              </select>
-            </div>
-            <div>
-              <label for="date" data-i18n="f_date">Date</label>
-              <input id="date" name="date" type="date" required />
-            </div>
-            <div>
-              <label for="time" data-i18n="f_time">Heure</label>
-              <input id="time" name="time" type="time" required />
-            </div>
-          </div>
-
-          <div style="margin-top:10px">
-            <label data-i18n="opt_title">Options</label>
-            <div class="optRow">
-              <input type="checkbox" id="optRefill" name="opt" value="Refill basiques">
-              <div><b data-i18n="o1t">Refill basiques</b><span data-i18n="o1d">Sacs poubelles, eau, café/thé, sucre, papier toilette…</span></div>
-            </div>
-            <div class="optRow" style="margin-top:10px">
-              <input type="checkbox" id="optWindows" name="opt" value="Vitres / baies">
-              <div><b data-i18n="o2t">Vitres / baies</b><span data-i18n="o2d">Intérieur (et extérieur accessible) — idéal terrasses.</span></div>
-            </div>
-            <div class="optRow" style="margin-top:10px">
-              <input type="checkbox" id="optSofa" name="opt" value="Canapés / textiles">
-              <div><b data-i18n="o3t">Canapés / textiles</b><span data-i18n="o3d">Nettoyage textile sur devis.</span></div>
-            </div>
-            <div class="optRow" style="margin-top:10px">
-              <input type="checkbox" id="optLaundry" name="opt" value="Pressing & retour plié">
-              <div><b data-i18n="o4t">Pressing & retour plié</b><span data-i18n="o4d">Collecte / dépôt / retour plié (sur accord).</span></div>
-            </div>
-          </div>
-
-          <div style="margin-top:10px">
-            <label for="details" data-i18n="f_details">Détails</label>
-            <textarea id="details" name="details" placeholder="Nombre de SDB, terrasses, timing check-out / check-in, remarques..."></textarea>
-          </div>
-
-          <div class="btnRow">
-            <button class="btn" type="submit" data-i18n="send">Envoyer</button>
-            <a class="btn2" id="whatsCtaForm" href="#" target="_blank" rel="noopener" data-i18n="cta_whats">WhatsApp</a>
-          </div>
-
-          <div class="fineprint" data-i18n="fp3">
-            Note : le message part avec VOTRE nom (client). Aucune signature “Rachid” n’est ajoutée dans le message client.
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="wrap" style="padding:0">
-        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+  <main>
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
           <div>
-            <b>RAM6 Premium Cleaning</b><br/>
-            <span class="muted">Casablanca & Dar Bouazza • Airbnb Turnover</span>
+            <h2>Ce que nous faisons (standard)</h2>
+            <p>Un turnover pensé pour la location courte durée : propre, net, sans odeur d’humidité, et prêt pour 5 étoiles.</p>
           </div>
-          <div class="muted">
-            Email: <a href="mailto:Ram6premiumcleaning@gmail.com">Ram6premiumcleaning@gmail.com</a> • WhatsApp: <a href="#" id="whatsFooter">+212 661 459 557</a>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 20h16"/><path d="M7 20V9a5 5 0 0 1 10 0v11"/>
+              </svg>
+            </div>
+            <h3>Salon & chambres</h3>
+            <p>Lits faits, surfaces dépoussiérées, rangement visuel, coins oubliés checkés, finitions soignées.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 10h16"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M6 10v9"/><path d="M18 10v9"/><path d="M4 19h16"/>
+              </svg>
+            </div>
+            <h3>Cuisine & gazinière</h3>
+            <p>Plan de travail, évier, crédence, gazinière, micro-ondes (extérieur), poubelles, vaisselle (si présente) + remise en ordre.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 4h10"/><path d="M9 4v6a3 3 0 0 0 6 0V4"/><path d="M6 20h12"/><path d="M8 20v-5a4 4 0 0 1 8 0v5"/>
+              </svg>
+            </div>
+            <h3>Salle de bain & WC</h3>
+            <p>Lavabos, robinetterie, miroir, douche/baignoire, WC, sols + serviettes à disposition (si fournies).</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
+    <section id="tarifs">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Tarifs (turnover)</h2>
+            <p>Transparents et simples. Les options se sélectionnent dans le formulaire.</p>
+          </div>
+        </div>
+
+        <div class="price-wrap">
+          <div class="card">
+            <table class="price-table" aria-label="Tarifs de base">
+              <thead>
+                <tr><th>Logement</th><th>Prix</th><th class="muted">Durée estimée*</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Studio</td><td><strong>160 DHS</strong></td><td class="muted">~ 1h00 – 1h30</td></tr>
+                <tr><td>1 chambre</td><td><strong>190 DHS</strong></td><td class="muted">~ 1h30 – 2h00</td></tr>
+                <tr><td>2 chambres</td><td><strong>220 DHS</strong></td><td class="muted">~ 2h00 – 2h45</td></tr>
+                <tr><td>3 chambres</td><td><strong>260 DHS</strong></td><td class="muted">~ 2h45 – 3h30</td></tr>
+                <tr><td>Au-delà</td><td><strong>+30 DHS</strong> / chambre</td><td class="muted">selon configuration</td></tr>
+              </tbody>
+            </table>
+
+            <div style="height:10px"></div>
+
+            <table class="price-table" aria-label="Suppléments">
+              <thead>
+                <tr><th>Suppléments</th><th>Prix</th><th class="muted">Notes</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Salle de bain supplémentaire</td><td><strong>+20 DHS</strong> / SDB</td><td class="muted">au-delà de 1 SDB</td></tr>
+                <tr><td>Terrasse supplémentaire</td><td><strong>+20 DHS</strong> / terrasse</td><td class="muted">au-delà de 1 terrasse</td></tr>
+                <tr><td>Jardin (saleté apparente)</td><td><strong>+20 DHS</strong></td><td class="muted">ex : papiers, déchets visibles</td></tr>
+              </tbody>
+            </table>
+
+            <p class="smallprint">
+              * La durée dépend de l’état du logement, du niveau de désordre et des options sélectionnées.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="note">
+              <strong>Offre fidélité :</strong> après <strong>5 passages</strong>, la <strong>6ème intervention à -50%</strong> (même logement).
+              <br/><br/>
+              <strong>Objets oubliés :</strong> mise sous sachet fermé + étiquette + photo envoyée au propriétaire.
+              <br/><br/>
+              <strong>Important :</strong> le calendrier ci-dessous vous propose des créneaux, puis nous confirmons par WhatsApp.
+              Pour un “blocage automatique” partagé entre tous les clients, il faut une mini-solution (Google Calendar / outil de réservation).
+            </div>
+
+            <div style="height:12px"></div>
+
+            <div class="card" style="box-shadow:none">
+              <h3 style="margin:0 0 8px">Pourquoi RAM6 (premium)</h3>
+              <p class="muted" style="margin:0;line-height:1.6">
+                Parce que votre note dépend des détails : cuisine nette (gazinière incluse), SDB brillante,
+                poubelle lavée, finitions, et une odeur “propre” — sans traces, sans humidité.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <div class="container checklist">
+        <div class="section-title">
+          <div>
+            <h2>Checklist (transparence totale)</h2>
+            <p>Vos clients savent à quoi s’attendre, et vous aussi : une prestation claire et contrôlable.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="check-head">
+            <div class="tag">Standard inclus</div>
+            <div class="tag">Options au choix</div>
+            <div class="tag">Photos avant/après</div>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <table class="table" aria-label="Checklist RAM6">
+            <thead>
+              <tr>
+                <th style="width:22%">Zone</th>
+                <th>Standard inclus</th>
+                <th style="width:28%">Options (sur demande)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Entrée / salon</strong></td>
+                <td>
+                  <ul>
+                    <li>Dépoussiérage surfaces + finitions</li>
+                    <li>Sols aspirés/lavés</li>
+                    <li>Rangement visuel (effet “hôtel”)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Nettoyage canapé (shampoo / sec)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Chambres</strong></td>
+                <td>
+                  <ul>
+                    <li>Lits faits + mise en ordre</li>
+                    <li>Dépoussiérage + sols</li>
+                    <li>Vérification “objets oubliés”</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Gestion linge (collecte / dépôt pressing)</li>
+                    <li>Retour linge propre & plié (si demandé)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Cuisine</strong></td>
+                <td>
+                  <ul>
+                    <li>Plan de travail, évier, crédence</li>
+                    <li><strong>Gazinière</strong> nettoyée</li>
+                    <li>Vaisselle (si présente) + rangement</li>
+                    <li>Poubelle vidée + <strong>lavage poubelle</strong></li>
+                    <li>Frigo : vidage + nettoyage simple (surface)</li>
+                    <li>Machine à café : vidage + nettoyage simple</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Refill (eau, café, thé, sucre, PQ, sacs poubelle…)</li>
+                    <li>Courses basiques (sur demande)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>SDB / WC</strong></td>
+                <td>
+                  <ul>
+                    <li>Lavabo, robinetterie, miroir</li>
+                    <li>Douche/baignoire + WC</li>
+                    <li>Sols + serviettes à disposition (si fournies)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Vitres (intérieur / extérieur selon accès)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Terrasses</strong></td>
+                <td>
+                  <ul>
+                    <li>Nettoyage de 1 terrasse (standard)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>+20 DHS par terrasse supplémentaire</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Objets oubliés</strong></td>
+                <td>
+                  <ul>
+                    <li>Mise sous sachet fermé + étiquette</li>
+                    <li>Photo envoyée au propriétaire</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Consignes spécifiques du propriétaire</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Photos</strong></td>
+                <td>
+                  <ul>
+                    <li>10 photos “avant” + 10 photos “après” (si demandé)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Vidéo courte (sur demande)</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="smallprint">
+            Nous travaillons avec nos produits pour un résultat propre, sans odeur désagréable, et un rendu premium.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservation">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Réserver / demander un devis</h2>
+            <p>Sélectionnez votre créneau. Les options se cochent ci-dessous. Nous confirmons par WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <form id="quoteForm" class="form">
+              <div class="form-grid">
+                <div>
+                  <label for="name">Nom & prénom</label>
+                  <input id="name" name="name" placeholder="Ex : Ramssiss Rachid" required />
+                </div>
+                <div>
+                  <label for="phone">Téléphone</label>
+                  <input id="phone" name="phone" placeholder="Ex : 06xxxxxxxx" inputmode="tel" required />
+                </div>
+
+                <div>
+                  <label for="zone">Ville / zone</label>
+                  <select id="zone" name="zone" required>
+                    <option value="">— Choisir —</option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="Dar Bouazza">Dar Bouazza</option>
+                    <option value="Autre">Autre (à préciser)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="zoneOther">Si “Autre”, précisez</label>
+                  <input id="zoneOther" name="zoneOther" placeholder="Ex : Ain Diab / Maarif / Bouskoura..." />
+                </div>
+
+                <div>
+                  <label for="address">Adresse (facultatif)</label>
+                  <input id="address" name="address" placeholder="Rue / résidence / étage (facultatif)" />
+                </div>
+
+                <div>
+                  <label for="propertyType">Type de logement</label>
+                  <select id="propertyType" name="propertyType" required>
+                    <option value="">— Choisir —</option>
+                    <option value="Studio">Studio</option>
+                    <option value="1 chambre">1 chambre</option>
+                    <option value="2 chambres">2 chambres</option>
+                    <option value="3 chambres">3 chambres</option>
+                    <option value="4+ chambres">4+ chambres</option>
+                    <option value="Villa">Villa</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="bedrooms">Nombre de chambres</label>
+                  <select id="bedrooms" name="bedrooms" required>
+                    <option value="0">0 (Studio)</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="bathrooms">Salles de bain</label>
+                  <select id="bathrooms" name="bathrooms" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="terraces">Terrasses</label>
+                  <select id="terraces" name="terraces" required>
+                    <option value="0">0</option>
+                    <option value="1">1 (standard)</option>
+                    <option value="2">2</option>
+                    <option value="3">3+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="garden">Jardin (saleté apparente)</label>
+                  <select id="garden" name="garden" required>
+                    <option value="non">Non</option>
+                    <option value="oui">Oui (+20 DHS)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="date">Date</label>
+                  <input id="date" name="date" type="date" required />
+                </div>
+
+                <div>
+                  <label for="time">Heure (créneaux disponibles)</label>
+                  <select id="time" name="time" required>
+                    <option value="">— Choisir une date d’abord —</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label>Options (à cocher)</label>
+                <div class="options">
+                  <label class="opt">
+                    <input type="checkbox" name="opt_refill" />
+                    <div>
+                      <strong>Refill essentials</strong>
+                      <span>Eau, sacs poubelle, café/thé, sucre, PQ… (au besoin)</span>
+                    </div>
+                  </label>
+
+                  <label class="opt">
+                    <input type="checkbox" name="opt_groceries" />
+                    <div>
+                      <strong>Courses basiques</strong>
+                      <span>Petites courses rapides selon liste (facture à part)</span>
+                    </div>
+                  </label>
+
+                  <label class="opt">
+                    <input type="checkbox" name="opt_windows" />
+                    <div>
+                      <strong>Vitres</strong>
+                      <span>Selon accès (intérieur / extérieur)</span>
+                    </div>
+                  </label>
+
+                  <label class="opt">
+                    <input type="checkbox" name="opt_sofa" />
+                    <div>
+                      <strong>Canapés</strong>
+                      <span>Shampoo / nettoyage sec</span>
+                    </div>
+                  </label>
+
+                  <label class="opt">
+                    <input type="checkbox" name="opt_laundry" />
+                    <div>
+                      <strong>Linge / pressing</strong>
+                      <span>Collecte / dépôt / retour (sur demande)</span>
+                    </div>
+                  </label>
+
+                  <label class="opt">
+                    <input type="checkbox" name="opt_photos" checked />
+                    <div>
+                      <strong>Pack photos (recommandé)</strong>
+                      <span>10 avant + 10 après (si vous le souhaitez)</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label for="details">Infos à préciser (très utile)</label>
+                <textarea id="details" name="details" placeholder="Ex : code boîte à clés, consignes, linge à récupérer, particularités, priorité du jour…"></textarea>
+              </div>
+
+              <div class="summary" aria-live="polite">
+                <div class="summary-row"><span>Base</span><strong id="sumBase">—</strong></div>
+                <div class="summary-row"><span>Suppléments</span><strong id="sumAdd">—</strong></div>
+                <div class="summary-row"><span>Options</span><strong id="sumOpt">Sur devis</strong></div>
+                <div class="summary-total">
+                  <strong>Total estimé</strong>
+                  <span id="sumTotal">—</span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="send-wa" id="btnWhatsApp">Envoyer via WhatsApp</button>
+                <button type="button" class="send-mail" id="btnEmail">Envoyer par Email</button>
+              </div>
+
+              <p class="smallprint">
+                Le calendrier vous propose des créneaux. La confirmation finale se fait par WhatsApp.
+                Pour bloquer automatiquement les créneaux pour tout le monde, nous pourrons connecter Google Calendar ensuite.
+              </p>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px">Comment se passe un turnover RAM6 ?</h3>
+            <p class="muted" style="margin:0;line-height:1.65">
+              1) Vous réservez un créneau + infos clés<br/>
+              2) RAM6 intervient (produits premium + finitions)<br/>
+              3) Objets oubliés : sachet fermé + photo au propriétaire<br/>
+              4) Photos avant/après (si demandé)<br/>
+              5) Votre logement est prêt — propre, net, et “Airbnb-ready”
+            </p>
+
+            <div style="height:14px"></div>
+
+            <div class="note">
+              <strong>Astuce 5 étoiles :</strong> un logement “simple” mais ultra propre + une odeur fraîche = meilleure note.
+              Le nettoyage de la <strong>poubelle</strong> et de la <strong>gazinière</strong> change tout.
+            </div>
+
+            <div style="height:14px"></div>
+
+            <h3 style="margin:0 0 10px">Contact direct</h3>
+            <p class="muted" style="margin:0;line-height:1.65">
+              WhatsApp : <strong>+212 661 459 557</strong><br/>
+              Email : <strong>Ram6premiumcleaning@gmail.com</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a class="wa-float" id="waFloat" href="#" aria-label="WhatsApp RAM6">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M20 11.6a7.9 7.9 0 0 1-11.6 7L4 20l1.5-4.2A7.9 7.9 0 1 1 20 11.6Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M8.7 9.6c.2-.5.6-.6 1-.6.2 0 .4 0 .6.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c-.1.1-.2.3-.1.5.2.6 1.1 1.7 2.4 2.2.2.1.4 0 .5-.1l.6-.6c.2-.2.4-.2.7-.1l1.6.8c.3.1.4.4.4.6 0 .5-.2 1-.6 1.2-.6.4-1.3.6-2.4.2-2.6-.9-4.6-3.4-5.2-5.2-.2-.6-.1-1.1.1-1.6Z" fill="white"/>
+      </svg>
+      WhatsApp
+    </a>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color:var(--ink)">RAM6 Premium Cleaning</strong><br/>
+        Casablanca • Dar Bouazza
+      </div>
+      <div class="legal">
+        © <span id="year"></span> RAM6 Premium Cleaning. — Contact : <strong>+212 661 459 557</strong> — <strong>Ram6premiumcleaning@gmail.com</strong>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    // ==== CONFIG ====
-    const WHATSAPP_NUMBER = "212661459557";
-    const EMAIL_TO = "Ram6premiumcleaning@gmail.com";
+    // ----------------------------
+    // Config
+    // ----------------------------
+    const COMPANY_EMAIL = "Ram6premiumcleaning@gmail.com";
+    const WA_NUMBER_INTL = "212661459557"; // no +
     const SITE_NAME = "RAM6 Premium Cleaning";
 
-    function waLink(text){
-      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-    }
-
-    function setWhatsLinks(){
-      const base = "Bonjour RAM6 Premium Cleaning. Je souhaite réserver / demander un devis.";
-      const links = ["whatsCtaTop","whatsCtaHero","whatsCtaQuick","whatsCtaForm","whatsFooter"].map(id=>document.getElementById(id)).filter(Boolean);
-      links.forEach(a=>a.href = waLink(base));
-      const footer = document.getElementById("whatsFooter");
-      if(footer) footer.textContent = "+212 661 459 557";
-    }
-
-    // ==== i18n (FR/EN) — affiche UNE langue seulement (pas de duplication) ====
-    const I18N = {
-      fr: {
-        nav_services:"Services", nav_prices:"Tarifs", nav_checklist:"Checklist", nav_quote:"Devis",
-        h1:"Nettoyage premium “check-in ready” pour locations courte durée",
-        sub:"Un service clé-en-main pour que vos voyageurs entrent dans un logement impeccable, frais et sans mauvaises surprises. Nous venons avec nos produits premium, nos consommables et une méthode standardisée — zéro serpillère humide laissée, zéro odeur désagréable.",
-        b1:"✅ 10 photos avant + 10 photos après",
-        b2:"✅ Linge & mise en place (selon votre stock)",
-        b3:"✅ Sacs “objets oubliés” + photo au propriétaire",
-        b4:"✅ Intervention Casablanca & Dar Bouazza",
-        cta_quote:"Demander un devis",
-        cta_whats:"Réserver sur WhatsApp",
-        fp1:"Offre fidélité : à partir du 5ᵉ passage, le 6ᵉ est à -50% (même logement, même format).",
-        quick_title:"Demande rapide",
-        quick_sub:"Recevez une confirmation et un prix final selon votre logement.",
-        f_name:"Nom", f_phone:"Téléphone", f_zone:"Zone", f_type:"Type de logement", f_date:"Date", f_time:"Heure", f_details:"Détails",
-        t_studio:"Studio", t_1br:"1 chambre", t_2br:"2 chambres", t_3br:"3 chambres", t_villa:"Villa",
-        send:"Envoyer",
-        fp2:"Nous répondons rapidement avec la disponibilité et le tarif exact (selon chambres / SDB / terrasses).",
-        s_title:"Ce que comprend le Standard (le plus demandé)",
-        std_intro:"Notre objectif : un logement “check-in ready”. Propre, frais, rangé, sans trace ni odeur. Nous venons avec nos produits premium pour garantir une expérience optimale à vos voyageurs.",
-        std1:"Cuisine : plan de travail, évier, robinetterie, micro-ondes, surfaces, gazinière/plaques, vaisselle (lavage + rangement).",
-        std2:"Salles de bain : WC, lavabo, douche/baignoire, miroirs, robinetterie, désinfection zones clés.",
-        std3:"Chambres & salon : lits faits (selon votre linge), remise en ordre, dépoussiérage, sols.",
-        std4:"Frigo : vider ce qui reste + nettoyage simple (surfaces).",
-        std5:"Poubelles : vider + lavage de la poubelle (point critique en Airbnb).",
-        std6:"Machine à café : vider / rincer / nettoyage simple si présente.",
-        std7:"Finition : contrôle visuel, aération, aucun matériel humide/odeur laissés.",
-        std8:"Objets oubliés : mis dans un sachet fermé, étiqueté + photo envoyée au propriétaire.",
-        std9:"Photos : 10 avant + 10 après (état des lieux et preuve de passage).",
-        opt_title:"Options (sur demande)",
-        o1t:"Refill basiques", o1d:"Sacs poubelles, eau, café/thé, sucre, papier toilette… selon votre liste.",
-        o2t:"Vitres / baies", o2d:"Intérieur (et extérieur accessible) — idéal pour terrasses.",
-        o3t:"Canapés / textiles (nettoyage)", o3d:"Nettoyage textile sur devis (selon matière et niveau).",
-        o4t:"Pressing & retour plié", o4d:"Collecte / dépôt / retour du linge propre et plié (si souhaité).",
-        opt_fp:"Les options sont facturées selon le temps et les fournitures. Nous confirmons toujours avant exécution.",
-        p_title:"Tarifs indicatifs (à confirmer selon configuration)",
-        p1t:"Studio", p2t:"1 chambre", p3t:"2 chambres", p4t:"3 chambres",
-        p_note1:"Standard “check-in ready”", p_note2:"10 photos avant + 10 après",
-        p_rules:"Règles simples (transparentes)",
-        th_item:"Élément", th_rule:"Règle",
-        r1a:"Chambre supplémentaire", r1b:"+40 MAD par chambre",
-        r2a:"Salle de bain supplémentaire", r2b:"+30 MAD par SDB",
-        r3a:"Terrasse supplémentaire", r3b:"+30 MAD par terrasse (si + d’une)",
-        r4a:"Jardin (saleté apparente)", r4b:"+30 MAD (ramassage simple : papiers / déchets visibles)",
-        r5a:"Villa", r5b:"Sur devis (étages, chambres, SDB, extérieurs)",
-        p_disclaimer:"Tarifs indicatifs. Nous confirmons le prix final selon la taille, le temps estimé et les options.",
-        c_title:"Checklist — nos engagements (clair et précis)",
-        c_col1:"Zone", c_col2:"Standard inclus", c_col3:"Options",
-        c1a:"Cuisine", c1b:"Vaisselle (lavage + rangement), plan de travail, évier, robinetterie, surfaces, micro-ondes, gazinière/plaques, sol.", c1c:"Refill basiques, rangement avancé, nettoyage profond sur devis.",
-        c2a:"Salle(s) de bain", c2b:"WC, lavabo, douche/baignoire, miroirs, désinfection zones clés, sol, serviettes à disposition (selon stock).", c2c:"Vitres/miroirs avancés, détartrage profond sur devis.",
-        c3a:"Chambres & salon", c3b:"Lits faits (selon linge), remise en ordre, dépoussiérage, surfaces, sols.", c3c:"Textile/canapés, pressing & retour plié.",
-        c4a:"Frigo", c4b:"Vider ce qui reste + nettoyage simple.", c4c:"Nettoyage profond sur devis.",
-        c5a:"Poubelles", c5b:"Vider + lavage de la poubelle.", c5c:"Refill sacs, re-stock.",
-        c6a:"Contrôle qualité", c6b:"10 photos avant + 10 après, aération, finition, aucun matériel humide/odeur laissés.", c6c:"Rapport détaillé sur demande.",
-        c7a:"Objets oubliés", c7b:"Sachet fermé, étiqueté + photo envoyée au propriétaire.", c7c:"Dépôt / remise (sur accord).",
-        q_title:"Demande de devis (détails + options)",
-        fp3:"Note : le message part avec VOTRE nom (client). Aucune signature “Rachid” n’est ajoutée dans le message client."
-      },
-      en: {
-        nav_services:"Services", nav_prices:"Pricing", nav_checklist:"Checklist", nav_quote:"Quote",
-        h1:"Premium ‘check-in ready’ cleaning for short-term rentals",
-        sub:"A turnkey service so your guests walk into a spotless, fresh, no-surprises home. We bring premium products, supplies, and a standardized process — no wet mops left behind, no unpleasant odors.",
-        b1:"✅ 10 photos before + 10 photos after",
-        b2:"✅ Linen setup (based on your stock)",
-        b3:"✅ Forgotten items bagged + photo to owner",
-        b4:"✅ Casablanca & Dar Bouazza",
-        cta_quote:"Request a quote",
-        cta_whats:"Book on WhatsApp",
-        fp1:"Loyalty offer: from the 5th service, the 6th is -50% (same property, same format).",
-        quick_title:"Quick request",
-        quick_sub:"Get confirmation and final price based on your property.",
-        f_name:"Name", f_phone:"Phone", f_zone:"Area", f_type:"Property type", f_date:"Date", f_time:"Time", f_details:"Details",
-        t_studio:"Studio", t_1br:"1 bedroom", t_2br:"2 bedrooms", t_3br:"3 bedrooms", t_villa:"Villa",
-        send:"Send",
-        fp2:"We reply quickly with availability and exact pricing (bedrooms / bathrooms / terraces).",
-        s_title:"What’s included in Standard (most requested)",
-        std_intro:"Goal: a true ‘check-in ready’ home — clean, fresh, tidy, no marks and no odors. We bring premium products for an optimal guest experience.",
-        std1:"Kitchen: countertops, sink, faucets, microwave, surfaces, stove/cooktop, dishes (wash + put away).",
-        std2:"Bathrooms: toilet, sink, shower/bath, mirrors, faucets, disinfect key touchpoints.",
-        std3:"Bedrooms & living room: made beds (based on linen), tidy up, dusting, floors.",
-        std4:"Fridge: remove leftovers + light clean.",
-        std5:"Bins: empty + wash the bin (Airbnb critical point).",
-        std6:"Coffee machine: empty/rinse/light clean if present.",
-        std7:"Finish: visual quality check, air out, no wet gear/odors left behind.",
-        std8:"Forgotten items: sealed labeled bag + photo to owner.",
-        std9:"Photos: 10 before + 10 after (proof of service).",
-        opt_title:"Add-ons (on request)",
-        o1t:"Basic refill", o1d:"Trash bags, water, coffee/tea, sugar, toilet paper… per your list.",
-        o2t:"Windows / glass", o2d:"Inside (and accessible outside) — ideal for terraces.",
-        o3t:"Sofas / textiles", o3d:"Textile cleaning quoted based on fabric/condition.",
-        o4t:"Laundry & return folded", o4d:"Pick-up / drop-off / return folded (if requested).",
-        opt_fp:"Add-ons are priced based on time and supplies. We always confirm before execution.",
-        p_title:"Indicative pricing (confirmed after details)",
-        p1t:"Studio", p2t:"1 bedroom", p3t:"2 bedrooms", p4t:"3 bedrooms",
-        p_note1:"Standard ‘check-in ready’", p_note2:"10 before + 10 after photos",
-        p_rules:"Simple rules (transparent)",
-        th_item:"Item", th_rule:"Rule",
-        r1a:"Extra bedroom", r1b:"+40 MAD per bedroom",
-        r2a:"Extra bathroom", r2b:"+30 MAD per bathroom",
-        r3a:"Extra terrace", r3b:"+30 MAD per extra terrace",
-        r4a:"Garden (visible litter)", r4b:"+30 MAD (basic pick-up: visible litter)",
-        r5a:"Villa", r5b:"Quoted (floors, beds, baths, outdoors)",
-        p_disclaimer:"Indicative prices. Final price confirmed based on size, time estimate and add-ons.",
-        c_title:"Checklist — clear commitments",
-        c_col1:"Area", c_col2:"Standard included", c_col3:"Add-ons",
-        c1a:"Kitchen", c1b:"Dishes (wash + put away), counters, sink, faucets, surfaces, microwave, stove/cooktop, floor.", c1c:"Basic refill, advanced organization, deep clean quoted.",
-        c2a:"Bathroom(s)", c2b:"Toilet, sink, shower/bath, mirrors, disinfect touchpoints, floor, towels set out (stock).", c2c:"Deep descaling quoted.",
-        c3a:"Bedrooms & living", c3b:"Made beds (linen), tidy, dust, surfaces, floors.", c3c:"Textile/sofa cleaning, laundry return.",
-        c4a:"Fridge", c4b:"Remove leftovers + light clean.", c4c:"Deep clean quoted.",
-        c5a:"Bins", c5b:"Empty + wash the bin.", c5c:"Refill bags/restock.",
-        c6a:"Quality check", c6b:"10 before + 10 after photos, air out, no wet gear/odors left behind.", c6c:"Detailed report on request.",
-        c7a:"Forgotten items", c7b:"Sealed labeled bag + photo to owner.", c7c:"Drop-off/hand-over on agreement.",
-        q_title:"Quote request (details + add-ons)",
-        fp3:"Note: the message is sent with YOUR name (client). No ‘Rachid’ signature is added to the client message."
-      }
+    // Prix (version convenue + 10 DHS)
+    const BASE_PRICES = {
+      studio: 160,
+      b1: 190,
+      b2: 220,
+      b3: 260
     };
+    const EXTRA_BEDROOM = 30;      // +30 DHS par chambre au-delà
+    const EXTRA_BATHROOM = 20;     // +20 DHS / SDB au-delà de 1
+    const EXTRA_TERRACE = 20;      // +20 DHS / terrasse au-delà de 1
+    const GARDEN_FEE = 20;         // +20 DHS
 
-    function applyLang(lang){
-      document.documentElement.lang = lang;
-      document.querySelectorAll("[data-i18n]").forEach(el=>{
-        const k = el.getAttribute("data-i18n");
-        if(I18N[lang] && I18N[lang][k]) el.innerHTML = I18N[lang][k];
-      });
-      document.getElementById("btnFR").classList.toggle("active", lang==="fr");
-      document.getElementById("btnEN").classList.toggle("active", lang==="en");
+    // Créneaux (indicatifs). Pour un blocage partagé entre clients => connecter Google Calendar plus tard.
+    const DAILY_SLOTS = [
+      "09:00","10:30","12:00","13:30","15:00","16:30","18:00"
+    ];
+
+    // “Bloqués” localement (sur ton téléphone seulement). Utile pour démo / ton usage.
+    // Format: "YYYY-MM-DD|HH:MM"
+    const STORAGE_KEY = "ram6_booked_slots_v1";
+    const booked = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"));
+
+    // ----------------------------
+    // Helpers
+    // ----------------------------
+    const $ = (id) => document.getElementById(id);
+
+    function money(dhs){ return `${dhs} DHS`; }
+
+    function getZoneValue(){
+      const z = $("zone").value;
+      const other = $("zoneOther").value.trim();
+      if(z === "Autre" && other) return `Autre: ${other}`;
+      return z || "";
     }
 
-    // ==== Forms: send to email or WhatsApp (clean message, no ugly lines) ====
-    function buildMessage(data, lang){
-      const lines = [];
-      if(lang==="fr"){
-        lines.push(`Demande de devis — ${SITE_NAME}`);
-        lines.push(`Nom: ${data.name || "-"}`);
-        lines.push(`Téléphone: ${data.phone || "-"}`);
-        lines.push(`Zone: ${data.zone || "-"}`);
-        lines.push(`Type: ${data.type || "-"}`);
-        lines.push(`Date: ${data.date || "-"}`);
-        lines.push(`Heure: ${data.time || "-"}`);
-        if(data.opts && data.opts.length) lines.push(`Options: ${data.opts.join(", ")}`);
-        if(data.details) lines.push(`Détails: ${data.details}`);
-      }else{
-        lines.push(`Quote request — ${SITE_NAME}`);
-        lines.push(`Name: ${data.name || "-"}`);
-        lines.push(`Phone: ${data.phone || "-"}`);
-        lines.push(`Area: ${data.zone || "-"}`);
-        lines.push(`Property type: ${data.type || "-"}`);
-        lines.push(`Date: ${data.date || "-"}`);
-        lines.push(`Time: ${data.time || "-"}`);
-        if(data.opts && data.opts.length) lines.push(`Add-ons: ${data.opts.join(", ")}`);
-        if(data.details) lines.push(`Details: ${data.details}`);
+    function computeBasePrice(bedrooms, propertyType){
+      // Studio
+      if(propertyType === "Studio" || bedrooms === 0) return BASE_PRICES.studio;
+
+      // 1..3 exact
+      if(bedrooms === 1) return BASE_PRICES.b1;
+      if(bedrooms === 2) return BASE_PRICES.b2;
+      if(bedrooms === 3) return BASE_PRICES.b3;
+
+      // >= 4: base 3ch + +30 par chambre supp
+      if(bedrooms >= 4) return BASE_PRICES.b3 + (bedrooms - 3) * EXTRA_BEDROOM;
+
+      // fallback
+      return BASE_PRICES.b1;
+    }
+
+    function computeAddOns(bathrooms, terraces, garden){
+      let add = 0;
+      if(bathrooms > 1) add += (bathrooms - 1) * EXTRA_BATHROOM;
+      if(terraces > 1) add += (terraces - 1) * EXTRA_TERRACE;
+      if(garden === "oui") add += GARDEN_FEE;
+      return add;
+    }
+
+    function selectedOptionsList(formData){
+      const opts = [];
+      if(formData.get("opt_refill")) opts.push("Refill essentials");
+      if(formData.get("opt_groceries")) opts.push("Courses basiques (facture à part)");
+      if(formData.get("opt_windows")) opts.push("Vitres");
+      if(formData.get("opt_sofa")) opts.push("Nettoyage canapés");
+      if(formData.get("opt_laundry")) opts.push("Linge / pressing");
+      if(formData.get("opt_photos")) opts.push("Pack photos (10 avant / 10 après)");
+      return opts;
+    }
+
+    // ----------------------------
+    // Calendar / slots
+    // ----------------------------
+    function setDateLimits(){
+      const today = new Date();
+      const min = new Date(today);
+      const max = new Date(today);
+      max.setDate(max.getDate() + 30);
+
+      const toISO = (d) => d.toISOString().slice(0,10);
+      $("date").min = toISO(min);
+      $("date").max = toISO(max);
+    }
+
+    function refreshSlots(){
+      const date = $("date").value;
+      const timeSel = $("time");
+      timeSel.innerHTML = "";
+
+      if(!date){
+        const o = document.createElement("option");
+        o.value = "";
+        o.textContent = "— Choisir une date d’abord —";
+        timeSel.appendChild(o);
+        return;
       }
-      return lines.join("\n");
-    }
 
-    function getLang(){
-      return document.documentElement.lang === "en" ? "en" : "fr";
-    }
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "— Sélectionner un créneau —";
+      timeSel.appendChild(placeholder);
 
-    function handleForm(form){
-      form.addEventListener("submit", (e)=>{
-        e.preventDefault();
-        const lang = getLang();
-        const fd = new FormData(form);
-        const opts = fd.getAll("opt");
-        const data = {
-          name: fd.get("name"),
-          phone: fd.get("phone"),
-          zone: fd.get("zone"),
-          type: fd.get("type"),
-          date: fd.get("date"),
-          time: fd.get("time"),
-          details: fd.get("details"),
-          opts
-        };
-        const msg = buildMessage(data, lang);
+      DAILY_SLOTS.forEach(t => {
+        const key = `${date}|${t}`;
+        const opt = document.createElement("option");
+        opt.value = t;
 
-        const subject = encodeURIComponent(lang==="fr" ? `Demande de devis — ${SITE_NAME}` : `Quote request — ${SITE_NAME}`);
-        const body = encodeURIComponent(msg);
-
-        // Email (opens mail app)
-        window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+        if(booked.has(key)){
+          opt.disabled = true;
+          opt.textContent = `${t} (indisponible)`;
+        } else {
+          opt.textContent = t;
+        }
+        timeSel.appendChild(opt);
       });
     }
 
-    // Quick form should pre-fill the main quote form (optional) and allow WhatsApp
-    const quickForm = document.getElementById("quickForm");
-    quickForm.addEventListener("submit",(e)=>{
-      e.preventDefault();
-      const lang = getLang();
-      const fd = new FormData(quickForm);
-      const data = {
-        name: fd.get("name"),
-        phone: fd.get("phone"),
-        zone: fd.get("zone"),
-        type: fd.get("type"),
-        date: fd.get("date"),
-        time: fd.get("time"),
-        details: fd.get("details"),
-        opts: []
-      };
-      const msg = buildMessage(data, lang);
-      window.open(waLink(msg), "_blank");
-    });
+    // ----------------------------
+    // Summary
+    // ----------------------------
+    function refreshSummary(){
+      const propertyType = $("propertyType").value;
+      const bedrooms = parseInt($("bedrooms").value || "0", 10);
+      const bathrooms = parseInt($("bathrooms").value || "1", 10);
+      const terraces = parseInt($("terraces").value || "0", 10);
+      const garden = $("garden").value || "non";
 
-    handleForm(document.getElementById("quoteForm"));
+      const base = computeBasePrice(bedrooms, propertyType);
+      const add = computeAddOns(bathrooms, terraces, garden);
+      const total = base + add;
 
-    // Language buttons
-    document.getElementById("btnFR").addEventListener("click", ()=>applyLang("fr"));
-    document.getElementById("btnEN").addEventListener("click", ()=>applyLang("en"));
+      $("sumBase").textContent = money(base);
+      $("sumAdd").textContent = add ? money(add) : "0 DHS";
+      $("sumTotal").textContent = money(total);
+    }
 
+    // ----------------------------
+    // WhatsApp & Email
+    // ----------------------------
+    function buildMessage(){
+      const form = $("quoteForm");
+      const data = new FormData(form);
+
+      const name = (data.get("name") || "").trim();
+      const phone = (data.get("phone") || "").trim();
+      const zone = getZoneValue();
+
+      const address = (data.get("address") || "").trim();
+      const propertyType = data.get("propertyType") || "";
+      const bedrooms = data.get("bedrooms") || "";
+      const bathrooms = data.get("bathrooms") || "";
+      const terraces = data.get("terraces") || "";
+      const garden = data.get("garden") || "non";
+
+      const date = data.get("date") || "";
+      const time = data.get("time") || "";
+
+      const details = (data.get("details") || "").trim();
+
+      const base = computeBasePrice(parseInt(bedrooms,10), propertyType);
+      const add = computeAddOns(parseInt(bathrooms,10), parseInt(terraces,10), garden);
+      const total = base + add;
+
+      const opts = selectedOptionsList(data);
+      const optsText = opts.length ? opts.map(o => `- ${o}`).join("\n") : "- Aucune";
+
+      const addrLine = address ? `Adresse (facultatif): ${address}\n` : "";
+      const gardenLine = garden === "oui" ? "Oui" : "Non";
+
+      // Message propre (pas de lignes bizarres, pas de signature RAM6 dans le corps client)
+      const msg =
+`Demande de réservation / devis — ${SITE_NAME}
+
+Client: ${name}
+Téléphone: ${phone}
+Ville/zone: ${zone}
+${addrLine}Logement: ${propertyType}
+Chambres: ${bedrooms}
+Salles de bain: ${bathrooms}
+Terrasses: ${terraces}
+Jardin (saleté apparente): ${gardenLine}
+
+Créneau souhaité: ${date} à ${time}
+
+Options:
+${optsText}
+
+Détails:
+${details || "-"}
+
+Total estimé (hors options sur devis): ${total} DHS
+
+Merci de confirmer la disponibilité du créneau.`;
+
+      return { msg, date, time };
+    }
+
+    function validateFormBasic(){
+      const requiredIds = ["name","phone","zone","propertyType","bedrooms","bathrooms","terraces","garden","date","time"];
+      for(const id of requiredIds){
+        const el = $(id);
+        if(!el.value){
+          el.focus();
+          alert("Merci de compléter tous les champs obligatoires (nom, téléphone, zone, logement, date & heure).");
+          return false;
+        }
+      }
+      if($("zone").value === "Autre" && !$("zoneOther").value.trim()){
+        $("zoneOther").focus();
+        alert("Merci de préciser la zone (champ 'Autre à préciser').");
+        return false;
+      }
+      return true;
+    }
+
+    function sendWhatsApp(){
+      if(!validateFormBasic()) return;
+      const { msg, date, time } = buildMessage();
+
+      const url = `https://wa.me/${WA_NUMBER_INTL}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank");
+
+      // Optionnel: bloquer le créneau localement (pour toi). Pas partagé aux autres.
+      const key = `${date}|${time}`;
+      booked.add(key);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...booked]));
+      refreshSlots();
+    }
+
+    function sendEmail(){
+      if(!validateFormBasic()) return;
+      const { msg, date, time } = buildMessage();
+      const subject = encodeURIComponent(`Demande de réservation / devis — ${SITE_NAME}`);
+      const body = encodeURIComponent(msg);
+
+      // Bloquer le créneau localement
+      const key = `${date}|${time}`;
+      booked.add(key);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...booked]));
+      refreshSlots();
+
+      window.location.href = `mailto:${COMPANY_EMAIL}?subject=${subject}&body=${body}`;
+    }
+
+    // ----------------------------
     // Init
-    setWhatsLinks();
-    applyLang("fr");
+    // ----------------------------
+    function wire(){
+      $("year").textContent = new Date().getFullYear();
 
-    // Improve UX: set date min to today
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth()+1).padStart(2,'0');
-    const dd = String(today.getDate()).padStart(2,'0');
-    const minDate = `${yyyy}-${mm}-${dd}`;
-    ["qDate","date"].forEach(id=>{
-      const el = document.getElementById(id);
-      if(el) el.min = minDate;
-    });
+      setDateLimits();
+      refreshSlots();
+      refreshSummary();
+
+      // Live updates
+      ["propertyType","bedrooms","bathrooms","terraces","garden"].forEach(id => {
+        $(id).addEventListener("change", refreshSummary);
+      });
+
+      $("zone").addEventListener("change", () => {
+        if($("zone").value !== "Autre") $("zoneOther").value = "";
+      });
+
+      $("date").addEventListener("change", refreshSlots);
+
+      $("btnWhatsApp").addEventListener("click", sendWhatsApp);
+      $("btnEmail").addEventListener("click", sendEmail);
+
+      // Floating WhatsApp basic
+      const waFloat = $("waFloat");
+      waFloat.href = `https://wa.me/${WA_NUMBER_INTL}?text=${encodeURIComponent("Bonjour RAM6 Premium Cleaning, je souhaite réserver un turnover Airbnb. Pouvez-vous me confirmer un créneau ?")}`;
+    }
+
+    wire();
   </script>
 </body>
 </html>
